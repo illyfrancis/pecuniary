@@ -1,0 +1,509 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Date",
+				"DateTime"
+			],
+			[
+				"git",
+				"github"
+			],
+			[
+				"bor",
+				"border-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/Documents/p6/jp thoughts/considerations.md",
+			"settings":
+			{
+				"buffer_size": 2411,
+				"line_ending": "Windows",
+				"name": "# Date & Time Category for Time Zone Preference"
+			}
+		},
+		{
+			"file": "/D/temp/del2/del2/pom.xml",
+			"settings":
+			{
+				"buffer_size": 884,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
+			"settings":
+			{
+				"buffer_size": 1574,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Repository/git/cap/poc/pom.xml",
+			"settings":
+			{
+				"buffer_size": 5713,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"",
+				"Convert Case: Swap Case"
+			],
+			[
+				"setyntax:mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"markdow",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"MARK",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"marke",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 209.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Package Control/Package Control.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/MarkdownPreview.sublime-settings",
+		"/D/Repository/git/pecuniary/markdown/github.css",
+		"//rf8f5e/aa_share/p6/20131018_1500 P6 business drivers and technical implications w ChristineM JeffH JoeS ChristianBolanos JohnE KateC KarenM.md",
+		"/D/Repository/git/scribble/questions/questions-min.css",
+		"/D/Repository/git/scribble/questions/questions-min.md",
+		"//rf8f5e/aa_share/p6/Assumptions on Tech Services business model.md",
+		"/D/Repository/git/pecuniary/markdown/camel.md",
+		"/D/Repository/git/pecuniary/markdown/camel.css",
+		"/D/Repository/git/pecuniary/markdown/test.md",
+		"/D/Repository/git/pecuniary/markdown/_test.css",
+		"/D/Repository/git/pecuniary/markdown/camel.htm",
+		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap-theme.css",
+		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap.css",
+		"/D/Repository/git/pecuniary/markdown/custom.css",
+		"/D/Repository/git/pecuniary/markdown/test.css",
+		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/js/bootstrap.js",
+		"/D/Repository/git/pecuniary/ui/lib/moment-2.3.1.js",
+		"/D/Repository/git/pecuniary/ui/lib/moment.js",
+		"/D/Repository/git/pecuniary/ui/lib/underscore-1.5.2.js",
+		"/D/Repository/git/pecuniary/ui/lib/backbone.js",
+		"/D/temp/trunk/StandardReportsWeb/src/test/groovy/com/bbh/standardreports/service/favorite/FavoriteConstructionHelper.groovy",
+		"/D/temp/trunk/StandardReportsWeb/src/main/java/com/bbh/standardreports/service/favorite/jersey/JerseyFavoriteApi.java",
+		"/D/temp/trunk/StandardReportsWeb/src/test/java/com/bbh/standardreports/service/UserAuthenticator.java",
+		"/D/temp/del/coverage/target/coverage.em",
+		"/d/temp/cheat.md",
+		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/CMS-Allocations2.html",
+		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/Overdraft-Rate-Lookup2.html",
+		"/d/temp/del.md",
+		"/D/Workspaces/ecieCommons/.svn/entries",
+		"/D/Workspaces/ecieCommons/.svn/format",
+		"/D/Documents/UTR/jp design notes/_logs.md",
+		"/D/Documents/UTR/jp design notes/todo.md",
+		"/D/Repository/git/cap/camelinaction-source/chapter6/pom.xml",
+		"/D/Repository/git/cap/camelinaction-source/pom.xml",
+		"//Rf8f5e/aa_share/utr/discussion_with_faz.md",
+		"/D/Documents/UTR/jp design notes/Outstanding Questions.md",
+		"/D/Documents/UTR/jp design notes/Corporate Actions.md",
+		"/D/Documents/UTR/jp design notes/cypher.md",
+		"/D/Documents/UTR/jp design notes/logs.md",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Documents/UTR/jp design notes/interface.md",
+		"/D/Documents/UTR/jp design notes/specs.md",
+		"/D/Documents/UTR/jp design notes/presso.md",
+		"/D/Documents/UTR/jp design notes/corpaction.md",
+		"/D/Documents/UTR/jp design notes/draft.md",
+		"/D/Repository/git/scribble/docs/corpaction.md",
+		"/D/Repository/git/scribble/docs/draft.md",
+		"/D/Repository/git/scribble/docs/specs.md",
+		"/D/Workspaces/juno/effectivejava/JUnitInAction/pom.xml",
+		"/D/Repository/git/scribble/docs/presso.md",
+		"/D/Repository/git/scribble/docs/interface.md",
+		"/D/Repository/git/scribble/docs/utr.md",
+		"/D/temp/utr-bootstrap.html",
+		"/d/temp/draft.html",
+		"/D/temp/utr2.html",
+		"/D/Repository/git/bogo/bogosuh.0.5.5/bogosuh.html",
+		"/d/temp/hello.md",
+		"/D/Apps/apache-activemq-5.8.0/example/src/ConsumerTool.java",
+		"/D/Apps/apache-activemq-5.8.0/example/build.xml",
+		"/D/Apps/apache-activemq-5.8.0/example/src/ProducerTool.java",
+		"/D/Apps/apache-activemq-5.8.0/example/src/ProducerAndConsumerTool.java",
+		"/D/Apps/apache-activemq-5.8.0/example/activemq.log",
+		"/D/Apps/apache-activemq-5.8.0/example/src/CommandLineSupport.java",
+		"/D/temp/ird-create.xml",
+		"/D/temp/testfile.xml",
+		"/D/temp/camel-notes.txt"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"proxy",
+			"=",
+			"\n	",
+			"table",
+			"\n",
+			"product offerings",
+			"•",
+			"╩",
+			"║",
+			"╩",
+			"║",
+			"╣",
+			"╠",
+			"╬",
+			"╗",
+			"╦",
+			"═",
+			"╔═══════════════╦═══════════════════╦═══════════════════╦═════════════════════╗",
+			"║",
+			"map",
+			"code",
+			"a.",
+			"visit",
+			"color:",
+			"../",
+			"\\",
+			"commons-logging",
+			"constructCreateFavoriteService",
+			"constructFavorite",
+			"createFavoriteService",
+			"gmaven-plugin",
+			"gmaven",
+			"uniqueValue",
+			"\n####",
+			"### ",
+			"\n",
+			"item",
+			"hash table",
+			"hashtab",
+			"\n##",
+			"table",
+			"allocations",
+			"tooltip",
+			"\n`[",
+			"java",
+			"interface",
+			"POSITION",
+			"MPR",
+			"     1",
+			"     ",
+			"    1",
+			"\n    ",
+			"    ",
+			"version",
+			"3. Transmission / Delivery channel",
+			"\n###",
+			"each",
+			"### Transmission / Delivery channel",
+			"### Message Format",
+			"### Message content",
+			"\n(",
+			"*",
+			"\n*",
+			"    *",
+			"*",
+			"once",
+			"source",
+			"???",
+			"int",
+			"UTR",
+			"VUS",
+			"destination",
+			"eip",
+			"Event Sink",
+			"for each",
+			"Infomediary",
+			"Infomediaray",
+			"event source adapters",
+			"bbh",
+			"`",
+			"messaging",
+			" \n",
+			"clientId",
+			"onMessage",
+			"transacted",
+			"parallelThreads",
+			"CommandLineSupport",
+			"producer",
+			"UTR",
+			"Barbara Rufle",
+			"Jun Paek"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"|",
+			"+",
+			"-",
+			"UTR",
+			"**",
+			"VUS",
+			"B",
+			"J"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/Documents/p6/jp thoughts/considerations.md",
+					"settings":
+					{
+						"buffer_size": 2411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								181,
+								181
+							]
+						],
+						"settings":
+						{
+							"auto_name": "# Date & Time Category for Time Zone Preference",
+							"spell_check": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/temp/del2/del2/pom.xml",
+					"settings":
+					{
+						"buffer_size": 884,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								800,
+								800
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
+					"settings":
+					{
+						"buffer_size": 1574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								674,
+								674
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/Repository/git/cap/poc/pom.xml",
+					"settings":
+					{
+						"buffer_size": 5713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3031,
+								3036
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1543.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true
+}
