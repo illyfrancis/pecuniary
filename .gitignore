@@ -59,7 +59,8 @@ Desktop.ini
 ## Sublime project and workspace
 ####################################
 
-*.sublime-*
+*.sublime-project
+*.sublime-workspace
 
 ####################################
 ## Defaults

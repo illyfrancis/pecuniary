@@ -4,14 +4,6 @@
 		"selected_items":
 		[
 			[
-				"Date",
-				"DateTime"
-			],
-			[
-				"git",
-				"github"
-			],
-			[
 				"bor",
 				"border-bottom"
 			]
@@ -20,76 +12,55 @@
 	"buffers":
 	[
 		{
-			"file": "/D/Documents/p6/jp thoughts/considerations.md",
+			"file": "/D/temp/js-demo/demo/demo.html",
 			"settings":
 			{
-				"buffer_size": 2411,
-				"line_ending": "Windows",
-				"name": "# Date & Time Category for Time Zone Preference"
-			}
-		},
-		{
-			"file": "/D/temp/del2/del2/pom.xml",
-			"settings":
-			{
-				"buffer_size": 884,
+				"buffer_size": 774,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
+			"file": "/D/temp/js-demo/demo/index.html",
 			"settings":
 			{
-				"buffer_size": 1574,
+				"buffer_size": 527,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/Repository/git/cap/poc/pom.xml",
+			"file": "/D/temp/js-demo/demo/js/main.js",
 			"settings":
 			{
-				"buffer_size": 5713,
-				"line_ending": "Unix"
+				"buffer_size": 1040,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 311.0,
+		"height": 357.0,
 		"selected_items":
 		[
 			[
-				"mar",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"in",
-				"Package Control: Install Package"
-			],
-			[
-				"Package ",
-				"Package Control: Install Package"
-			],
-			[
 				"mark",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"m",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
-				"ma",
-				"Markdown Preview: Preview in Browser"
+				"Markdown Preview: Python Markdown: Preview in Browser"
 			],
 			[
 				"markdown",
 				"Markdown Preview: Preview in Browser"
 			],
 			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
 				"",
 				"Convert Case: Swap Case"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
 			],
 			[
 				"setyntax:mark",
@@ -108,11 +79,14 @@
 				"Markdown Preview: Open Markdown Cheat sheet"
 			]
 		],
-		"width": 512.0
+		"width": 576.0
 	},
 	"console":
 	{
-		"height": 209.0
+		"height": 125.0,
+		"history":
+		[
+		]
 	},
 	"distraction_free":
 	{
@@ -125,34 +99,18 @@
 	},
 	"file_history":
 	[
-		"/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Package Control/Package Control.sublime-settings",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Default/Preferences.sublime-settings",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/MarkdownPreview.sublime-settings",
-		"/D/Repository/git/pecuniary/markdown/github.css",
-		"//rf8f5e/aa_share/p6/20131018_1500 P6 business drivers and technical implications w ChristineM JeffH JoeS ChristianBolanos JohnE KateC KarenM.md",
-		"/D/Repository/git/scribble/questions/questions-min.css",
-		"/D/Repository/git/scribble/questions/questions-min.md",
-		"//rf8f5e/aa_share/p6/Assumptions on Tech Services business model.md",
-		"/D/Repository/git/pecuniary/markdown/camel.md",
-		"/D/Repository/git/pecuniary/markdown/camel.css",
 		"/D/Repository/git/pecuniary/markdown/test.md",
-		"/D/Repository/git/pecuniary/markdown/_test.css",
-		"/D/Repository/git/pecuniary/markdown/camel.htm",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap-theme.css",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap.css",
 		"/D/Repository/git/pecuniary/markdown/custom.css",
+		"/C/Documents and Settings/cy4y423/Application Data/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/D/Repository/git/pecuniary/markdown/test.html",
 		"/D/Repository/git/pecuniary/markdown/test.css",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/js/bootstrap.js",
-		"/D/Repository/git/pecuniary/ui/lib/moment-2.3.1.js",
-		"/D/Repository/git/pecuniary/ui/lib/moment.js",
-		"/D/Repository/git/pecuniary/ui/lib/underscore-1.5.2.js",
-		"/D/Repository/git/pecuniary/ui/lib/backbone.js",
+		"/D/Repository/git/pecuniary/markdown/test.md.css",
+		"/C/Documents and Settings/cy4y423/Application Data/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/D/temp/trunk/StandardReportsWeb/src/test/groovy/com/bbh/standardreports/service/favorite/FavoriteConstructionHelper.groovy",
 		"/D/temp/trunk/StandardReportsWeb/src/main/java/com/bbh/standardreports/service/favorite/jersey/JerseyFavoriteApi.java",
 		"/D/temp/trunk/StandardReportsWeb/src/test/java/com/bbh/standardreports/service/UserAuthenticator.java",
 		"/D/temp/del/coverage/target/coverage.em",
+		"/D/Repository/git/scribble/questions/questions-min.md",
 		"/d/temp/cheat.md",
 		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/CMS-Allocations2.html",
 		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/Overdraft-Rate-Lookup2.html",
@@ -169,6 +127,8 @@
 		"/D/Documents/UTR/jp design notes/cypher.md",
 		"/D/Documents/UTR/jp design notes/logs.md",
 		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/MarkdownPreview.sublime-settings",
 		"/D/Documents/UTR/jp design notes/interface.md",
 		"/D/Documents/UTR/jp design notes/specs.md",
 		"/D/Documents/UTR/jp design notes/presso.md",
@@ -205,7 +165,6 @@
 		"height": 0.0,
 		"where_history":
 		[
-			""
 		]
 	},
 	"find_state":
@@ -213,31 +172,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"proxy",
-			"=",
-			"\n	",
-			"table",
-			"\n",
-			"product offerings",
-			"•",
-			"╩",
-			"║",
-			"╩",
-			"║",
-			"╣",
-			"╠",
-			"╬",
-			"╗",
-			"╦",
-			"═",
-			"╔═══════════════╦═══════════════════╦═══════════════════╦═════════════════════╗",
-			"║",
-			"map",
-			"code",
-			"a.",
-			"visit",
-			"color:",
-			"../",
 			"\\",
 			"commons-logging",
 			"constructCreateFavoriteService",
@@ -311,9 +245,6 @@
 		"regex": true,
 		"replace_history":
 		[
-			"|",
-			"+",
-			"-",
 			"UTR",
 			"**",
 			"VUS",
@@ -334,26 +265,26 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/D/Documents/p6/jp thoughts/considerations.md",
+					"file": "/D/temp/js-demo/demo/demo.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2411,
+						"buffer_size": 774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								181,
-								181
+								258,
+								257
 							]
 						],
 						"settings":
 						{
-							"auto_name": "# Date & Time Category for Time Zone Preference",
-							"spell_check": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -363,25 +294,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/D/temp/del2/del2/pom.xml",
+					"file": "/D/temp/js-demo/demo/index.html",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 884,
+						"buffer_size": 527,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								800,
-								800
+								527,
+								527
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -391,56 +321,29 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
+					"file": "/D/temp/js-demo/demo/js/main.js",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1574,
+						"buffer_size": 1040,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								674,
-								674
+								392,
+								392
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Java/Java.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/D/Repository/git/cap/poc/pom.xml",
-					"settings":
-					{
-						"buffer_size": 5713,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3031,
-								3036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1543.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -479,6 +382,11 @@
 		]
 	},
 	"menu_visible": true,
+	"output.markdown":
+	{
+		"height": 118.0
+	},
+	"project": "default.sublime-project",
 	"replace":
 	{
 		"height": 62.0
@@ -500,10 +408,24 @@
 		],
 		"width": 380.0
 	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 195.0,
-	"status_bar_visible": true
+	"side_bar_width": 250.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
 }
