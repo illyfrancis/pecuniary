@@ -8,12 +8,27 @@ define(['backbone', 'models/Account'], function (Backbone, Account) {
         model: Account,
         url: '/api/accounts',
         selectSome: function () {
-            
+            console.log('do stuff');
+            this.nums = this.pluck('number');
+            console.log('number size: ' + this.nums.length);
+            this.huge = this.nums.concat(this.nums);
+            console.log('number size: ' + this.huge.length);
+
+            this.findSome();
+        },
+        findSome: function () {
+            this.index = _.indexOf(this.huge, '6023717');
+            this.lastindex = _.lastIndexOf(this.huge, '6023717');
         }
     });
 
     var accounts = new Accounts();
-    app.accounts = accounts || {};
+    app.acct = accounts || {};
 
-    // accounts.fetch();
+    accounts.fetch({
+        success: function () {
+            console.log('fetched');
+            accounts.selectSome();
+        }
+    });
 });

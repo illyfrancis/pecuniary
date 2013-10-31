@@ -116,11 +116,11 @@ define([
 
             describe('when invoking showFilter', function () {
                 it('should trigger showFilters event with criterion name', function () {
-                    var tigger = sinon.spy(EventBus, 'trigger');
+                    var trigger = sinon.spy(EventBus, 'trigger');
                     filterStatusBadge.showFilter();
-                    expect(tigger).toHaveBeenCalledOnce();
-                    expect(tigger).toHaveBeenCalledWithExactly('showFilters', 'filter-name');
-                    tigger.restore();
+                    expect(trigger).toHaveBeenCalledOnce();
+                    expect(trigger).toHaveBeenCalledWithExactly('showFilters', 'filter-name');
+                    trigger.restore();
                 });
             });
 

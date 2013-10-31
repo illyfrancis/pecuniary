@@ -25,6 +25,13 @@ public class Accounts {
 			.as(Model.class));
 	}
 
+	public static List<Model> get(Integer limit, Integer skip) {
+		return newArrayList(accounts.find()
+				.skip(skip)
+				.limit(limit)
+				.as(Model.class));
+	}
+
 	public static Model get(String id) {
 		if (ObjectId.isValid(id)) {
 			return accounts.findOne(new ObjectId(id)).as(Model.class);

@@ -9,6 +9,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
@@ -24,6 +25,21 @@ public class AccountResource {
 		// ObjectId _id;
 		String number;
 		String name;
+		Boolean selected;
+	}
+
+	private static class Combo {
+
+		String s;
+		List<Model> m;
+	}
+
+	private static class Selected {
+		String s;
+
+		public String toString() {
+			return s;
+		}
 	}
 
 	@GET
@@ -71,5 +87,31 @@ public class AccountResource {
 				accounts) {
 		};
 		return Response.ok(entity).build();
+	}
+
+	@POST
+	@Path("search")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response search(
+        @QueryParam("limit") Integer limit,
+        @QueryParam("skip") Integer skip,
+        Selected selected) {
+		System.out.println("> search with " + limit + " : " + skip + " : " + selected);
+
+		List<Model> accounts = Accounts.get(limit, skip);
+		for (Model m : accounts) {
+			if (selected.s.indexOf(m.number) > 0) {
+				m.selected = true;
+			}
+		}
+
+		// GenericEntity<List<Model>> entity = new GenericEntity<List<Model>>(accounts) {
+		// };
+		// return Response.ok(entity).build();
+		Combo c = new Combo();
+		c.m = accounts;
+		c.s = selected.s;
+		return Response.ok(c).build();
 	}
 }
