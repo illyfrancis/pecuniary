@@ -70,7 +70,7 @@ define(['collections/SimpleAccounts', 'models/Account'], function (Accounts, Acc
             });
 
             var q = new Search();
-            q.set('s', accts.join());
+            q.set('aux', accts.join());
             q.save();
 
 
