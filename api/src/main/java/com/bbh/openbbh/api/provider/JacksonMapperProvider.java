@@ -3,8 +3,9 @@ package com.bbh.openbbh.api.provider;
 import static org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.*;
 import static org.codehaus.jackson.map.DeserializationConfig.Feature.*;
 import static org.codehaus.jackson.map.SerializationConfig.Feature.*;
-import static org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.*;
+//import static org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.*;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 import java.io.IOException;
 
 import javax.ws.rs.ext.ContextResolver;
@@ -22,6 +23,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.SerializerProvider;
 import org.codehaus.jackson.map.introspect.VisibilityChecker.Std;
 import org.codehaus.jackson.map.module.SimpleModule;
+
 
 @Provider
 public class JacksonMapperProvider implements ContextResolver<ObjectMapper> {
@@ -41,7 +43,8 @@ public class JacksonMapperProvider implements ContextResolver<ObjectMapper> {
         mapper.configure(AUTO_DETECT_GETTERS, false)
         	.configure(AUTO_DETECT_SETTERS, false)
         	.setDeserializationConfig(mapper.getDeserializationConfig().without(FAIL_ON_UNKNOWN_PROPERTIES))
-        	.setSerializationConfig(mapper.getSerializationConfig().withSerializationInclusion(NON_DEFAULT))
+        	.setSerializationConfig(mapper.getSerializationConfig().withSerializationInclusion(Inclusion.NON_EMPTY))
+//        	.setSerializationConfig(mapper.getSerializationConfig().withSerializationInclusion(Inclusion.ALWAYS))
         	.setVisibilityChecker(Std.defaultInstance().withFieldVisibility(ANY));
 
         mapper.registerModule(new SimpleModule("jersey", new Version(1, 0, 0, null)) //

@@ -3,8 +3,8 @@ package com.bbh.openbbh.api.resource;
 import static org.junit.Assert.*;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.common.base.Splitter;
@@ -37,5 +37,32 @@ public class RandomStuffTest {
                 Splitter.on(',').trimResults().omitEmptyStrings().split(empty));
 
         assertEquals(0, immutable.size());
+    }
+    
+    @Test
+    public void testRegexIgnoreCase() {
+        
+        // case sensitive 
+        Pattern p = Pattern.compile("ING.*");
+        assertTrue(p.matcher("ING").matches());
+        assertFalse(p.matcher("ing").matches());
+        assertTrue(p.matcher("ING abc").matches());
+        assertFalse(p.matcher("ing abc").matches());
+        assertFalse(p.matcher("a ING bc").matches());
+        assertFalse(p.matcher("a ing bc").matches());
+        
+        Pattern pi = Pattern.compile("ING.*", Pattern.CASE_INSENSITIVE);
+        assertTrue(pi.matcher("ING").matches());
+        assertTrue(pi.matcher("ing").matches());
+        assertTrue(pi.matcher("ING abc").matches());
+        assertTrue(pi.matcher("ing abc").matches());
+        assertFalse(pi.matcher("a ING bc").matches());
+        assertFalse(pi.matcher("a ing bc").matches());
+    }
+    
+    @Test
+    public void testStringFormat() {
+        String out = String.format("{%s:{$regex:#}}", "name");
+        assertEquals("{name:{$regex:#}}", out);
     }
 }

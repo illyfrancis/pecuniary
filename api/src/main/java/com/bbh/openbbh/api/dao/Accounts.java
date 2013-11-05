@@ -34,24 +34,38 @@ public class Accounts {
 
     public static List<Model> findBy(Optional<String> number, Optional<String> name,
             Optional<String> include, Integer limit, Integer skip) {
-        
+
         List<String> numbers = Lists.newArrayList("0150110", "0153452", "12345");
-        
-        String s = "$and: [ {number: {$regex: #}}, {number: {$in: #}}]";
-        
+
         return Lists.newArrayList(accounts.find(
-//                "{name: {$regex: #}, number: {$regex: #}}", 
-//                "^ING.*", "^015.*")
-//                "{name: {$regex: #}, number: {$in: #}}",
-//                "^ING.*", numbers
+                // "{name: {$regex: #}, number: {$regex: #}}",
+                // "^ING.*", "^015.*")
+                // "{name: {$regex: #}, number: {$in: #}}",
+                // "^ING.*", numbers
                 "{$and: [{name: {$regex: #}}, {number: {$regex: #}}, {number: {$in: #}}] }",
-                "^ING.*",
+                "ING.*",
                 "^015.*",
                 numbers
                 )
                 .skip(skip)
                 .limit(limit)
                 .as(Model.class));
+    }
+
+    public static List<Model> findBy(Optional<String> criteria, Object[] values, int limit, int skip) {
+        return Lists.newArrayList(accounts.find(criteria.or("{}"), values)
+                .skip(skip)
+                .limit(limit)
+                .sort("{number: 1}")
+                .as(Model.class));
+    }
+
+    public static List<Model> findBy(Optional<String> criteria, Object[] values) {
+        return Lists.newArrayList(accounts.find(criteria.or("{}"), values).as(Model.class));
+    }
+
+    public static long count(Optional<String> criteria, Object[] values) {
+        return accounts.count(criteria.or("{}"), values);
     }
 
     public static long count() {
