@@ -3,6 +3,7 @@ package com.bbh.openbbh.api.resource;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import com.google.common.base.Joiner;
@@ -13,6 +14,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 
 public class AccountsFilterQueryMapper {
 
@@ -45,17 +47,7 @@ public class AccountsFilterQueryMapper {
     
     private static void addFieldToCriteria(Map<String, Object> criteria, String field, String value) {
         if (!Strings.isNullOrEmpty(value)) {
-            
-            // String.format("{%s:{$regex:#}}", field);
-            // String.format("^%s.*");
-            //
-            // new
-            // StringBuilder("{").append(field).append(":{$regex:#}}").toString();
-            // new StringBuilder("^").append(value).append(".*");
-            
-            // criteria.put("{" + field + ":{$regex:#}}", "^" + value + ".*");
             criteria.put("{" + field + ":#}", Pattern.compile("^" + value + ".*", Pattern.CASE_INSENSITIVE));
-//            criteria.put("{" + field + ":#}", Pattern.compile(value + ".*"));
         }
     }
 
@@ -137,7 +129,7 @@ public class AccountsFilterQueryMapper {
         return Optional.fromNullable(queryStr);
     }
 
-    public Object[] getValues() {
+    public Object[] getCriteriaValues() {
         return criteria.values().toArray();
     }
 
@@ -149,6 +141,10 @@ public class AccountsFilterQueryMapper {
         }
         
         return val;
+    }
+    
+    public Set<String> getSetOfCheckedAccountNumbers() {
+        return Sets.newHashSet(checked);
     }
 
     private static class Builder {

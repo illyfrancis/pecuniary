@@ -32,7 +32,7 @@ public class AccountsFilterQueryMapperTest {
     @Test
     public void testQueryMapperModifier() {
         AccountsFilterQuery query = new AccountsFilterQuery.Builder()
-                .setLimit(50).setSkip(15).build();
+                .setLimit("50").setSkip("15").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
         assertEquals(50, mapper.getLimit());
@@ -46,7 +46,7 @@ public class AccountsFilterQueryMapperTest {
         Optional<String> criteria = mapper.getCriteria();
 
         assertFalse(criteria.isPresent());
-        assertEquals(0, mapper.getValues().length);
+        assertEquals(0, mapper.getCriteriaValues().length);
     }
 
     @Test
@@ -61,7 +61,7 @@ public class AccountsFilterQueryMapperTest {
         String expected = "{$and:[{name:#},{number:#}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getValues();
+        Object[] values = mapper.getCriteriaValues();
         assertTrue(values.length > 0);
         assertEquals("^she.*", values[0].toString());
         assertEquals("^015.*", values[1].toString());
@@ -79,7 +79,7 @@ public class AccountsFilterQueryMapperTest {
         String expected = "{$and:[{number:#}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getValues();
+        Object[] values = mapper.getCriteriaValues();
         assertTrue(values.length > 0);
         assertEquals("^015.*", values[0].toString());
     }
@@ -122,7 +122,7 @@ public class AccountsFilterQueryMapperTest {
         String expected = "{$and: [ {number: {$in:#}} ]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getValues();
+        Object[] values = mapper.getCriteriaValues();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(1, values.length);
         assertEquals(checkedNumbers, values[0]);
@@ -140,7 +140,7 @@ public class AccountsFilterQueryMapperTest {
         String expected = "{$and: [ {number: {$nin:#}} ]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getValues();
+        Object[] values = mapper.getCriteriaValues();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(1, values.length);
         assertEquals(checkedNumbers, values[0]);
@@ -159,7 +159,7 @@ public class AccountsFilterQueryMapperTest {
         String expected = "{$and:[{name:#},{number:#},{number:{$in:#}}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getValues();
+        Object[] values = mapper.getCriteriaValues();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(3, values.length);
         assertEquals("^she.*", values[0].toString());

@@ -72,10 +72,9 @@ class AccountsFilterQuery {
         }
     }
 
-    // for test support
-    public static class Builder {
-        private Long limit;
-        private Long skip;
+    static class Builder {
+        private String limit;
+        private String skip;
         private String number;
         private String name;
         private String display;
@@ -83,12 +82,12 @@ class AccountsFilterQuery {
 
         public Builder() {}
 
-        public Builder setLimit(long limit) {
+        public Builder setLimit(String limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setSkip(long skip) {
+        public Builder setSkip(String skip) {
             this.skip = skip;
             return this;
         }
