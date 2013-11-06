@@ -23,13 +23,13 @@ public class AccountsFilterResource {
     @Path("search")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response search(EntityHolder<AccountsFilterQuery> query) {
-        if (query.hasEntity()) {
-            AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query.getEntity());
+    public Response search(EntityHolder<AccountsFilterQuery> queryHolder) {
+        if (queryHolder.hasEntity()) {
+            AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper
+                    .of(queryHolder.getEntity());
 
-            List<Model> accounts = Accounts.findBy(mapper.getCriteria(),
-                    mapper.getCriteriaValues(),
-                    mapper.getLimit(), mapper.getSkip());
+            List<Model> accounts = Accounts.findBy(mapper.queryString(), mapper.queryParams(),
+                    mapper.limit(), mapper.skip());
 
             // update its selection based on clients selection
             if (mapper.getChecked().isPresent()) {
@@ -41,9 +41,8 @@ public class AccountsFilterResource {
                 }
             }
 
-            long count = Accounts.count(mapper.getCriteria(), mapper.getCriteriaValues());
-            return Response.ok(SearchResponse.from(accounts,
-                    mapper.getChecked().orNull(), count)).build();
+            return Response.ok(SearchResponse.from(accounts, mapper.getChecked().orNull(),
+                    Accounts.count(mapper.queryString(), mapper.queryParams()))).build();
         } else {
             System.out.println("no query");
         }
@@ -78,6 +77,45 @@ public class AccountsFilterResource {
         return Response.ok().build();
     }
 
+    private SearchResponse perform(String action, AccountsFilterQuery query) {
+        AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
+
+        List<Model> accountsFromQuery = Accounts.findBy(mapper.queryString(),
+                mapper.queryParams());
+
+        Set<String> selectedAccountNumbers = mapper.checkedAccountNumbers();
+        // add any new selection to existing selection.
+        for (Model account : accountsFromQuery) {
+            if ("select".equalsIgnoreCase(action)) {
+                // TODO try functional
+                selectedAccountNumbers.add(account.getNumber());
+            } else if ("unselect".equalsIgnoreCase(action)) {
+                selectedAccountNumbers.remove(account.getNumber());
+            }
+        }
+
+        AccountsFilterQuery newQuery = copyQueryAndSetAccountNumbers(query,
+                selectedAccountNumbers);
+        AccountsFilterQueryMapper newMapper = AccountsFilterQueryMapper.of(newQuery);
+
+        List<Model> accounts = Accounts.findBy(newMapper.queryString(),
+                newMapper.queryParams(),
+                newMapper.limit(), newMapper.skip());
+
+        // update account's selection based on current selection
+        for (Model account : accounts) {
+            if (selectedAccountNumbers.contains(account.getNumber())) {
+                account.select(true);
+            }
+        }
+
+        SearchResponse response = SearchResponse.from(accounts,
+                Joiner.on(",").join(selectedAccountNumbers),
+                Accounts.count(newMapper.queryString(), newMapper.queryParams()));
+
+        return response;
+    }
+
     private AccountsFilterQuery copyQueryAndSetAccountNumbers(AccountsFilterQuery query,
             Set<String> accountNumbers) {
 
@@ -97,45 +135,6 @@ public class AccountsFilterResource {
         }
 
         return builder.build();
-    }
-
-    private SearchResponse perform(String action, AccountsFilterQuery query) {
-        AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-
-        List<Model> accountsFromQuery = Accounts.findBy(mapper.getCriteria(),
-                mapper.getCriteriaValues());
-
-        Set<String> selectedAccountNumbers = mapper.getSetOfCheckedAccountNumbers();
-        // add any new selection to existing selection.
-        for (Model account : accountsFromQuery) {
-            if ("select".equalsIgnoreCase(action)) {
-                // TODO try functional
-                selectedAccountNumbers.add(account.getNumber());
-            } else if ("unselect".equalsIgnoreCase(action)) {
-                selectedAccountNumbers.remove(account.getNumber());
-            }
-        }
-
-        AccountsFilterQuery newQuery = copyQueryAndSetAccountNumbers(query,
-                selectedAccountNumbers);
-        AccountsFilterQueryMapper newMapper = AccountsFilterQueryMapper.of(newQuery);
-
-        List<Model> accounts = Accounts.findBy(newMapper.getCriteria(),
-                newMapper.getCriteriaValues(),
-                newMapper.getLimit(), newMapper.getSkip());
-
-        // update account's selection based on current selection
-        for (Model account : accounts) {
-            if (selectedAccountNumbers.contains(account.getNumber())) {
-                account.select(true);
-            }
-        }
-
-        SearchResponse response = SearchResponse.from(accounts,
-                Joiner.on(",").join(selectedAccountNumbers),
-                Accounts.count(newMapper.getCriteria(), newMapper.getCriteriaValues()));
-
-        return response;
     }
 
     private static class SearchResponse {

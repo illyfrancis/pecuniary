@@ -18,15 +18,15 @@ public class AccountsFilterQueryMapperTest {
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
 
         assertNotNull(mapper);
-        assertNotNull(mapper.getCriteria());
+        assertNotNull(mapper.queryString());
     }
 
     @Test
     public void testDefaultQueryMapsToDefaultLimitAndSkipValues() {
         AccountsFilterQuery query = new AccountsFilterQuery();
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        assertEquals(Integer.valueOf(DEFAULT_LIMIT).intValue(), mapper.getLimit());
-        assertEquals(Integer.valueOf(DEFAULT_SKIP).intValue(), mapper.getSkip());
+        assertEquals(Integer.valueOf(DEFAULT_LIMIT).intValue(), mapper.limit());
+        assertEquals(Integer.valueOf(DEFAULT_SKIP).intValue(), mapper.skip());
     }
 
     @Test
@@ -35,18 +35,18 @@ public class AccountsFilterQueryMapperTest {
                 .setLimit("50").setSkip("15").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        assertEquals(50, mapper.getLimit());
-        assertEquals(15, mapper.getSkip());
+        assertEquals(50, mapper.limit());
+        assertEquals(15, mapper.skip());
     }
 
     @Test
     public void testDefaultQueryMapsToAbsentCriteria() {
         AccountsFilterQuery query = new AccountsFilterQuery();
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
 
         assertFalse(criteria.isPresent());
-        assertEquals(0, mapper.getCriteriaValues().length);
+        assertEquals(0, mapper.queryParams().length);
     }
 
     @Test
@@ -55,13 +55,13 @@ public class AccountsFilterQueryMapperTest {
                 .setNumber("015").setName("she").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
 
         assertTrue(criteria.isPresent());
         String expected = "{$and:[{name:#},{number:#}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getCriteriaValues();
+        Object[] values = mapper.queryParams();
         assertTrue(values.length > 0);
         assertEquals("^she.*", values[0].toString());
         assertEquals("^015.*", values[1].toString());
@@ -73,13 +73,13 @@ public class AccountsFilterQueryMapperTest {
                 .setNumber("015").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
 
         assertTrue(criteria.isPresent());
         String expected = "{$and:[{number:#}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getCriteriaValues();
+        Object[] values = mapper.queryParams();
         assertTrue(values.length > 0);
         assertEquals("^015.*", values[0].toString());
     }
@@ -89,7 +89,7 @@ public class AccountsFilterQueryMapperTest {
         AccountsFilterQuery query = new AccountsFilterQuery();
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
 
-        assertFalse(mapper.getCriteria().isPresent());
+        assertFalse(mapper.queryString().isPresent());
     }
 
     @Test
@@ -98,7 +98,7 @@ public class AccountsFilterQueryMapperTest {
                 .setDisplay("all").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        assertFalse(mapper.getCriteria().isPresent());
+        assertFalse(mapper.queryString().isPresent());
     }
 
     @Test
@@ -107,7 +107,7 @@ public class AccountsFilterQueryMapperTest {
                 .setDisplay("checked").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        assertTrue(mapper.getCriteria().isPresent());
+        assertTrue(mapper.queryString().isPresent());
     }
 
     @Test
@@ -116,13 +116,13 @@ public class AccountsFilterQueryMapperTest {
                 .setDisplay("checked").setChecked("1234, 2345, 999").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
         assertTrue(criteria.isPresent());
 
         String expected = "{$and: [ {number: {$in:#}} ]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getCriteriaValues();
+        Object[] values = mapper.queryParams();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(1, values.length);
         assertEquals(checkedNumbers, values[0]);
@@ -134,13 +134,13 @@ public class AccountsFilterQueryMapperTest {
                 .setDisplay("unchecked").setChecked("1234, 2345, 999").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
         assertTrue(criteria.isPresent());
 
-        String expected = "{$and: [ {number: {$nin:#}} ]}".replaceAll(" ", "");
+        String expected = "{$and: [ {number: {$not: {$in:#}}} ]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getCriteriaValues();
+        Object[] values = mapper.queryParams();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(1, values.length);
         assertEquals(checkedNumbers, values[0]);
@@ -153,13 +153,13 @@ public class AccountsFilterQueryMapperTest {
                 .setChecked("1234, 2345, 999").build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        Optional<String> criteria = mapper.getCriteria();
+        Optional<String> criteria = mapper.queryString();
         assertTrue(criteria.isPresent());
 
         String expected = "{$and:[{name:#},{number:#},{number:{$in:#}}]}".replaceAll(" ", "");
         assertEquals(expected, criteria.get());
 
-        Object[] values = mapper.getCriteriaValues();
+        Object[] values = mapper.queryParams();
         List<String> checkedNumbers = Lists.newArrayList("1234", "2345", "999");
         assertEquals(3, values.length);
         assertEquals("^she.*", values[0].toString());
@@ -173,7 +173,7 @@ public class AccountsFilterQueryMapperTest {
                 .build();
 
         AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
-        assertFalse(mapper.getCriteria().isPresent());
+        assertFalse(mapper.queryString().isPresent());
         assertEquals("1234,2345,999", mapper.getChecked().get());
     }
 }

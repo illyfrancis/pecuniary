@@ -37,17 +37,18 @@ public class AccountsFilterQueryMapper {
             addFieldToCriteria(criteria, "number", filter.getNumber());
             addDisplayOptionToCriteria(criteria, filter.getDisplay(), filter.getChecked());
         }
-        
+
         builder.setCriteria(ImmutableMap.copyOf(criteria));
         builderSetCheckedList(builder, query.getFilter());
         builderSetModifier(builder, query.getModifier());
 
         return builder.build();
     }
-    
+
     private static void addFieldToCriteria(Map<String, Object> criteria, String field, String value) {
         if (!Strings.isNullOrEmpty(value)) {
-            criteria.put("{" + field + ":#}", Pattern.compile("^" + value + ".*", Pattern.CASE_INSENSITIVE));
+            criteria.put("{" + field + ":#}",
+                    Pattern.compile("^" + value + ".*", Pattern.CASE_INSENSITIVE));
         }
     }
 
@@ -58,9 +59,10 @@ public class AccountsFilterQueryMapper {
             if (display.equalsIgnoreCase("checked")) {
                 filterBySelection = "{number:{$in:#}}"; // $in
             } else if (display.equalsIgnoreCase("unchecked")) {
-                filterBySelection = "{number:{$nin:#}}"; // $not in
+                // filterBySelection = "{number:{$nin:#}}"; // $nin
+                filterBySelection = "{number:{$not:{$in:#}}}"; // $not in - performs better than $nin
             }
-            
+
             if (!Strings.isNullOrEmpty(filterBySelection)) {
                 List<String> numbers = Lists.newArrayList(Splitter.on(",").trimResults()
                         .omitEmptyStrings().split(Strings.nullToEmpty(checked)));
@@ -77,7 +79,7 @@ public class AccountsFilterQueryMapper {
             checkedList = ImmutableList.copyOf(Splitter.on(",").trimResults().omitEmptyStrings()
                     .split(Strings.nullToEmpty(filter.getChecked())));
         }
-        
+
         builder.setChecked(checkedList);
     }
 
@@ -100,16 +102,16 @@ public class AccountsFilterQueryMapper {
         this.skip = skip;
     }
 
-    public int getLimit() {
+    public int limit() {
         return limit;
     }
 
-    public int getSkip() {
+    public int skip() {
         return skip;
     }
 
-    public Optional<String> getCriteria() {
-        
+    public Optional<String> queryString() {
+
         StringBuilder queryStrBuilder = new StringBuilder();
         Iterator<String> i = criteria.keySet().iterator();
         while (i.hasNext()) {
@@ -123,27 +125,28 @@ public class AccountsFilterQueryMapper {
         String queryStr = null;
         if (queryStrBuilder.length() > 0) {
             // wrap everything in $and
-            queryStr = new StringBuilder("{$and:[").append(queryStrBuilder.toString()).append("]}").toString();
+            queryStr = new StringBuilder("{$and:[").append(queryStrBuilder.toString()).append("]}")
+                    .toString();
         }
-        
+
         return Optional.fromNullable(queryStr);
     }
 
-    public Object[] getCriteriaValues() {
+    public Object[] queryParams() {
         return criteria.values().toArray();
     }
 
     public Optional<String> getChecked() {
-        
+
         Optional<String> val = Optional.absent();
         if (!checked.isEmpty()) {
             val = Optional.of(Joiner.on(",").join(checked));
         }
-        
+
         return val;
     }
-    
-    public Set<String> getSetOfCheckedAccountNumbers() {
+
+    public Set<String> checkedAccountNumbers() {
         return Sets.newHashSet(checked);
     }
 
@@ -170,7 +173,7 @@ public class AccountsFilterQueryMapper {
             this.checked = checked;
             return this;
         }
-        
+
         Builder setCriteria(ImmutableMap<String, Object> criteria) {
             this.criteria = criteria;
             return this;

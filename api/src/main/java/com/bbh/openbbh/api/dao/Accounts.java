@@ -32,40 +32,20 @@ public class Accounts {
                 .as(Model.class));
     }
 
-    public static List<Model> findBy(Optional<String> number, Optional<String> name,
-            Optional<String> include, Integer limit, Integer skip) {
-
-        List<String> numbers = Lists.newArrayList("0150110", "0153452", "12345");
-
-        return Lists.newArrayList(accounts.find(
-                // "{name: {$regex: #}, number: {$regex: #}}",
-                // "^ING.*", "^015.*")
-                // "{name: {$regex: #}, number: {$in: #}}",
-                // "^ING.*", numbers
-                "{$and: [{name: {$regex: #}}, {number: {$regex: #}}, {number: {$in: #}}] }",
-                "ING.*",
-                "^015.*",
-                numbers
-                )
-                .skip(skip)
-                .limit(limit)
-                .as(Model.class));
-    }
-
-    public static List<Model> findBy(Optional<String> criteria, Object[] values, int limit, int skip) {
-        return Lists.newArrayList(accounts.find(criteria.or("{}"), values)
+    public static List<Model> findBy(Optional<String> queryString, Object[] queryParams, int limit, int skip) {
+        return Lists.newArrayList(accounts.find(queryString.or("{}"), queryParams)
                 .skip(skip)
                 .limit(limit)
                 .sort("{number: 1}")
                 .as(Model.class));
     }
 
-    public static List<Model> findBy(Optional<String> criteria, Object[] values) {
-        return Lists.newArrayList(accounts.find(criteria.or("{}"), values).as(Model.class));
+    public static List<Model> findBy(Optional<String> queryString, Object[] queryParams) {
+        return Lists.newArrayList(accounts.find(queryString.or("{}"), queryParams).as(Model.class));
     }
 
-    public static long count(Optional<String> criteria, Object[] values) {
-        return accounts.count(criteria.or("{}"), values);
+    public static long count(Optional<String> queryString, Object[] queryParams) {
+        return accounts.count(queryString.or("{}"), queryParams);
     }
 
     public static long count() {
