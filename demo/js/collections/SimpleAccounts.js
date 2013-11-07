@@ -6,7 +6,10 @@ define([
 
     var Accounts = Backbone.Collection.extend({
         model: Account,
-        url: '/api/accounts'
+        url: '/api/accountsfilter/search',
+        parse: function (response, options) {
+        	return response.accounts;
+        }
     });
 
     return Accounts;

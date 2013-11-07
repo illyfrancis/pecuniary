@@ -18,7 +18,7 @@ import com.sun.jersey.core.provider.EntityHolder;
 
 @Path("accountsfilter")
 public class AccountsFilterResource {
-
+    
     @POST
     @Path("search")
     @Consumes(MediaType.APPLICATION_JSON)

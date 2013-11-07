@@ -1,6 +1,57 @@
-define(['collections/SimpleAccounts', 'models/Account'], function (Accounts, Account) {
+define(['collections/SimpleAccounts', 'models/Account', 'models/Query2'], function (Accounts, Account, Query) {
     describe('Given Accounts Collection', function () {
         var accts;
+
+        it('basic test', function () {
+
+            var done = false;
+            var accounts = new Accounts();
+            var query = new Query({
+                    filter: {}
+                }, {
+                    limit: 12,
+                    searchUrl: '/api/accountsfilter/select',
+                    success: function (query, response, options) {
+                        console.log('success');
+                        accounts.reset(response.accounts);
+                        done = true;
+                        console.log(JSON.stringify(accounts));
+                    },
+                    error: function () {
+                        console.log('failure');
+                    }
+                });
+
+            query.execute();
+
+            waitsFor(function () {
+                // return accounts.length > 0;
+                return done;
+            }, 'accounts never fetched', 1000);
+
+            runs(function () {
+                // run perf check
+                accts = accounts.pluck('number');
+            });
+        });
+    });
+
+    xdescribe('Given Accounts Collection', function () {
+        var accts;
+
+        it('basic test', function () {
+            var accounts = new Accounts();
+            Backbone.sync("create", accounts);
+
+            waitsFor(function () {
+                return accounts.length > 0;
+            }, 'accounts never fetched', 10000);
+
+            runs(function () {
+                // run perf check
+                accts = accounts.pluck('number');
+            });
+        });
 
         it('fetch accounts for perf checks (must be run in order)', function () {
             var accounts = new Accounts();
