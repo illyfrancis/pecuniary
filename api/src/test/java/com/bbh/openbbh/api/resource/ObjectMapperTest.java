@@ -21,7 +21,7 @@ public class ObjectMapperTest {
                 .replaceAll("'", "\"");
 
         ObjectMapper mapper = new ObjectMapper();
-        AccountCriteria filter = mapper.readValue(filterJson, AccountCriteria.class);
+        AccountsQueryMapper.Criteria filter = mapper.readValue(filterJson, AccountsQueryMapper.Criteria.class);
         assertEquals("015", filter.number);
         assertEquals("she", filter.name);
         assertEquals("checked", filter.display);

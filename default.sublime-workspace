@@ -51,70 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "demo/js/views/FilterManager.js",
-			"settings":
-			{
-				"buffer_size": 2723,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "demo/test/jasmine/spec/collections/ArraysSpec.js",
-			"settings":
-			{
-				"buffer_size": 3482,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "demo/js/models/Account.js",
-			"settings":
-			{
-				"buffer_size": 442,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/src/main/java/com/bbh/openbbh/api/dao/Accounts.java",
-			"settings":
-			{
-				"buffer_size": 1092,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Documents/reporting app/paginator design.md",
-			"settings":
-			{
-				"buffer_size": 6380,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Repository/demo/js/models/Query.js",
-			"settings":
-			{
-				"buffer_size": 1828,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/src/main/java/com/bbh/openbbh/api/resource/TransactionResource.java",
-			"settings":
-			{
-				"buffer_size": 5908,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "api/src/main/java/com/bbh/openbbh/api/dao/Transactions.java",
-			"settings":
-			{
-				"buffer_size": 1614,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -188,10 +124,41 @@
 	},
 	"file_history":
 	[
+		"/D/Repository/git/pecuniary/demo/js/models/Query2.js",
+		"/D/Documents/reporting app/query-or-filter.md",
+		"/D/Documents/reporting app/query-design.md",
+		"/D/Repository/git/pecuniary/demo/js/apps/TransactionQuery.js",
+		"/D/Repository/git/pecuniary/demo/js/models/Query.js",
+		"/D/Repository/git/pecuniary/demo/test/jasmine/spec/collections/ArraysSpec.js",
+		"/D/Repository/git/pecuniary/demo/js/collections/SimpleAccounts.js",
+		"/D/Repository/git/pecuniary/demo/js/models/NewQuery.js",
+		"/D/Repository/git/pecuniary/demo/WEB-INF/web.xml",
+		"/D/Repository/git/pecuniary/demo/js/collections/TransactionReport.js",
+		"/D/Documents/reporting app/nextsteps.md",
+		"/C/Documents and Settings/cy4y423/Desktop/post it.md",
+		"/C/Documents and Settings/cy4y423/Desktop/User Accounts.md",
+		"/C/Documents and Settings/cy4y423/.m2/settings.xml",
+		"/C/Documents and Settings/cy4y423/Desktop/javascript - the good part.md",
+		"/C/Documents and Settings/cy4y423/Desktop/WS Portal Admin User ID.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/User.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/WebSphere7 (dev) Admin User ID.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/Notes.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/javascript - the good part.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/ibm worklight demo by prolifics.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/dev setup issues.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/droptables.sql",
+		"/C/Documents and Settings/cy4y423/Desktop/meeting with Christ White 12-8-9.txt",
+		"/C/Documents and Settings/cy4y423/Desktop/tail.txt",
+		"/D/Documents/reporting app/query-example.md",
+		"/D/Repository/git/pecuniary/demo/js/views/FilterManager.js",
+		"/D/Repository/git/pecuniary/demo/js/models/Account.js",
+		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/dao/Accounts.java",
+		"/D/Documents/reporting app/paginator design.md",
+		"/D/Repository/demo/js/models/Query.js",
+		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/resource/TransactionResource.java",
+		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/dao/Transactions.java",
 		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/resource/AccountResource.java",
 		"/D/Repository/git/pecuniary/demo/js/collections/Accounts.js",
-		"/D/Repository/git/pecuniary/demo/js/collections/SimpleAccounts.js",
-		"/D/Repository/git/pecuniary/demo/test/jasmine/spec/collections/ArraysSpec.js",
 		"/D/Repository/git/pecuniary/demo/js/views/AccountFilter.js",
 		"/D/Repository/git/pecuniary/demo/js/views/AccountList.js",
 		"/D/Repository/git/pecuniary/demo/js/views/AccountRow.js",
@@ -206,18 +173,12 @@
 		"/D/Repository/git/pecuniary/demo/test/jasmine/spec/views/FilterStatusBadgeSpec.js",
 		"/D/Repository/git/pecuniary/demo/test/jasmine/arraytest.js",
 		"/D/Repository/git/pecuniary/demo/test/jasmine/spec/collections/ArraysSpec2.js",
-		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/dao/Accounts.java",
-		"/D/Repository/git/pecuniary/demo/js/models/Query.js",
 		"/D/Repository/git/pecuniary/demo/test/test-main.js",
 		"/D/Repository/git/bogo/api/src/main/db/scripts/data/accounts.export",
-		"/D/Repository/git/pecuniary/demo/js/models/Account.js",
-		"/D/Documents/reporting app/nextsteps.md",
-		"/D/Documents/reporting app/query-design.md",
 		"/D/Documents/scheduler/coverage.md",
 		"/D/Repository/demo/js/collections/Accounts.js",
 		"/D/Repository/git/pecuniary/demo/js/init.js",
 		"/D/Repository/git/pecuniary/demo/js/collections/Countries.js",
-		"/D/Documents/reporting app/paginator design.md",
 		"/D/Repository/git/pecuniary/demo/js/config.js",
 		"/D/Repository/demo/js/main.js",
 		"/D/Repository/git/pecuniary/demo/bogosuh.html",
@@ -290,24 +251,7 @@
 		"/D/Repository/git/scribble/docs/corpaction.md",
 		"/D/Repository/git/scribble/docs/draft.md",
 		"/D/Repository/git/scribble/docs/specs.md",
-		"/D/Workspaces/juno/effectivejava/JUnitInAction/pom.xml",
-		"/D/Repository/git/scribble/docs/presso.md",
-		"/D/Repository/git/scribble/docs/interface.md",
-		"/D/Repository/git/scribble/docs/utr.md",
-		"/D/temp/utr-bootstrap.html",
-		"/d/temp/draft.html",
-		"/D/temp/utr2.html",
-		"/D/Repository/git/bogo/bogosuh.0.5.5/bogosuh.html",
-		"/d/temp/hello.md",
-		"/D/Apps/apache-activemq-5.8.0/example/src/ConsumerTool.java",
-		"/D/Apps/apache-activemq-5.8.0/example/build.xml",
-		"/D/Apps/apache-activemq-5.8.0/example/src/ProducerTool.java",
-		"/D/Apps/apache-activemq-5.8.0/example/src/ProducerAndConsumerTool.java",
-		"/D/Apps/apache-activemq-5.8.0/example/activemq.log",
-		"/D/Apps/apache-activemq-5.8.0/example/src/CommandLineSupport.java",
-		"/D/temp/ird-create.xml",
-		"/D/temp/testfile.xml",
-		"/D/temp/camel-notes.txt"
+		"/D/Workspaces/juno/effectivejava/JUnitInAction/pom.xml"
 	],
 	"find":
 	{
@@ -315,9 +259,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"D:\\Repository\\git\\pecuniary\\demo\\js",
 			""
 		]
 	},
@@ -326,6 +271,23 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n            ",
+			"querySuccess",
+			"execute",
+			"'query'",
+			"Model",
+			"^## ",
+			"^\\* ",
+			"* ",
+			". ",
+			"- ",
+			". ",
+			".",
+			"6162267",
+			"0015594",
+			"0066985",
+			"select",
+			"Limited",
 			"\n            ",
 			"Model",
 			"number",
@@ -436,26 +398,16 @@
 			"Infomediary",
 			"Infomediaray",
 			"event source adapters",
-			"bbh",
-			"`",
-			"messaging",
-			" \n",
-			"clientId",
-			"onMessage",
-			"transacted",
-			"parallelThreads",
-			"CommandLineSupport",
-			"producer",
-			"UTR",
-			"Barbara Rufle",
-			"Jun Paek"
+			"bbh"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"# ",
+			"- ",
 			"# ",
 			"JavaScript",
 			"|",
@@ -476,231 +428,8 @@
 	"groups":
 	[
 		{
-			"selected": 4,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "demo/js/views/FilterManager.js",
-					"settings":
-					{
-						"buffer_size": 2723,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1624,
-								1624
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "demo/test/jasmine/spec/collections/ArraysSpec.js",
-					"settings":
-					{
-						"buffer_size": 3482,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2277,
-								2277
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 997.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "demo/js/models/Account.js",
-					"settings":
-					{
-						"buffer_size": 442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "api/src/main/java/com/bbh/openbbh/api/dao/Accounts.java",
-					"settings":
-					{
-						"buffer_size": 1092,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								975,
-								975
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 54.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/Documents/reporting app/paginator design.md",
-					"settings":
-					{
-						"buffer_size": 6380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5993,
-								5993
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4057.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/D/Repository/demo/js/models/Query.js",
-					"settings":
-					{
-						"buffer_size": 1828,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								504,
-								504
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "api/src/main/java/com/bbh/openbbh/api/resource/TransactionResource.java",
-					"settings":
-					{
-						"buffer_size": 5908,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2010,
-								2010
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1320.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "api/src/main/java/com/bbh/openbbh/api/dao/Transactions.java",
-					"settings":
-					{
-						"buffer_size": 1614,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								857,
-								865
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 162.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -768,6 +497,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 222.0,
+	"side_bar_width": 290.0,
 	"status_bar_visible": true
 }

@@ -14,18 +14,19 @@ import com.bbh.openbbh.api.dao.Accounts;
 import com.bbh.openbbh.api.dao.Accounts.Model;
 import com.google.common.base.Joiner;
 import com.google.common.base.Objects;
+import com.google.common.base.Strings;
 import com.sun.jersey.core.provider.EntityHolder;
 
-@Path("accountsfilter")
-public class AccountsFilterResource {
+@Path("accounts")
+public class AccountsResource {
     
     @POST
     @Path("search")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response search(EntityHolder<AccountsFilterQuery> queryHolder) {
+    public Response search(EntityHolder<Query> queryHolder) {
         if (queryHolder.hasEntity()) {
-            AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper
+            AccountsQueryMapper mapper = AccountsQueryMapper
                     .of(queryHolder.getEntity());
 
             List<Model> accounts = Accounts.findBy(mapper.queryString(), mapper.queryParams(),
@@ -53,7 +54,7 @@ public class AccountsFilterResource {
     @Path("select")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response select(EntityHolder<AccountsFilterQuery> queryHolder) {
+    public Response select(EntityHolder<Query> queryHolder) {
         if (queryHolder.hasEntity()) {
             SearchResponse response = perform("select", queryHolder.getEntity());
             return Response.ok(response).build();
@@ -67,7 +68,7 @@ public class AccountsFilterResource {
     @Path("unselect")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response unselect(EntityHolder<AccountsFilterQuery> queryHolder) {
+    public Response unselect(EntityHolder<Query> queryHolder) {
         if (queryHolder.hasEntity()) {
             SearchResponse response = perform("unselect", queryHolder.getEntity());
             return Response.ok(response).build();
@@ -77,8 +78,8 @@ public class AccountsFilterResource {
         return Response.ok().build();
     }
 
-    private SearchResponse perform(String action, AccountsFilterQuery query) {
-        AccountsFilterQueryMapper mapper = AccountsFilterQueryMapper.of(query);
+    private SearchResponse perform(String action, Query query) {
+        AccountsQueryMapper mapper = AccountsQueryMapper.of(query);
 
         List<Model> accountsFromQuery = Accounts.findBy(mapper.queryString(),
                 mapper.queryParams());
@@ -94,9 +95,11 @@ public class AccountsFilterResource {
             }
         }
 
-        AccountsFilterQuery newQuery = copyQueryAndSetAccountNumbers(query,
-                selectedAccountNumbers);
-        AccountsFilterQueryMapper newMapper = AccountsFilterQueryMapper.of(newQuery);
+/*        Query newQuery = copyQueryAndSetAccountNumbers(query, selectedAccountNumbers);
+//        Query newQuery = new Query(query);
+ */        
+        Query newQuery = AccountsQueryMapper.createQueryWith(query, selectedAccountNumbers);
+        AccountsQueryMapper newMapper = AccountsQueryMapper.of(newQuery);
 
         List<Model> accounts = Accounts.findBy(newMapper.queryString(),
                 newMapper.queryParams(),
@@ -116,29 +119,24 @@ public class AccountsFilterResource {
         return response;
     }
 
-    private AccountsFilterQuery copyQueryAndSetAccountNumbers(AccountsFilterQuery query,
+    private Query copyQueryAndSetAccountNumbers(Query query,
             Set<String> accountNumbers) {
 
-        // copy using the builder
-        AccountsFilterQuery.Builder builder = new AccountsFilterQuery.Builder();
-        if (query.getFilter() != null) {
-            AccountsFilterQuery.Filter filter = query.getFilter();
-            builder.setName(filter.getName())
-                    .setNumber(filter.getNumber())
-                    .setDisplay(filter.getDisplay())
-                    .setChecked(Joiner.on(",").join(accountNumbers));
+        String checked = Joiner.on(",").join(accountNumbers);
+        Query copy = new Query(query);
+        
+        if (Strings.isNullOrEmpty(copy.criteria)) {
+            copy.criteria = "{ \"checked\": \"" + checked + "\" }";
+        } else {
+            // TODO - replace checked
+//            copy.criteria;
         }
-
-        if (query.getModifier() != null) {
-            AccountsFilterQuery.Modifier modifier = query.getModifier();
-            builder.setLimit(modifier.getLimit()).setSkip(modifier.getSkip());
-        }
-
-        return builder.build();
+        
+        return copy;
     }
 
-    private static class SearchResponse {
-        private List<Model> accounts;
+    static class SearchResponse {
+        List<Model> accounts;
         private String checked;
         private long total;
 

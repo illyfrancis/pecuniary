@@ -8,6 +8,17 @@ public class Query {
     public String skip;
     public String sort;
     public String fields;
+    
+    public Query() {
+    }
+    
+    public Query(Query orig) {
+        this.criteria = orig.criteria;
+        this.limit = orig.limit;
+        this.skip = orig.skip;
+        this.sort = orig.sort;
+        this.fields = orig.fields;
+    }
 
     @Override
     public String toString() {
