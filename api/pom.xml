@@ -7,33 +7,28 @@
   <artifactId>api</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>demo api</name>
-  <url>http://localhost</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <jersey-version>1.17.1</jersey-version>
-    <warDirectory>${basedir}/../demo</warDirectory>
-    <web-port>9090</web-port>
-    <db-port>27017</db-port>
-  </properties>
-
+  <name>api Maven Webapp</name>
+  <url>http://maven.apache.org</url>
   <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>11.0.1</version>
+    </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
       <artifactId>jersey-server</artifactId>
-      <version>${jersey-version}</version>
+      <version>1.16</version>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
     	<artifactId>jersey-servlet</artifactId>
-      	<version>${jersey-version}</version>
+      	<version>1.16</version>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
     	<artifactId>jersey-json</artifactId>
-      	<version>${jersey-version}</version>
+      	<version>1.16</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -51,17 +46,6 @@
       <artifactId>jongo</artifactId>
       <version>0.4</version>
     </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>15.0</version>
-    </dependency>
-    <dependency>
-    	<groupId>junit</groupId>
-    	<artifactId>junit</artifactId>
-    	<version>4.11</version>
-    	<scope>test</scope>
-    </dependency>
   </dependencies>
   <build>
     <finalName>api</finalName>
@@ -71,8 +55,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.0</version>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <compilerVersion>1.5</compilerVersion>
+          <verbose>false</verbose>
+          <source>1.6</source>
+          <target>1.6</target>
         </configuration>        
       </plugin>
       <plugin>
@@ -89,19 +75,10 @@
             <configuration>
               <outputDirectory>${warDirectory}</outputDirectory>
               <resources>
-              <!-- 
-                <resource>
-                  <directory>D:\Repository\git\francis-trial\home\js</directory>
-                  <filtering>false</filtering>
-                </resource>
-               -->
                 <resource>
                   <directory>${basedir}/src/main/webapp</directory>
                   <filtering>false</filtering>
                   <excludes>
-                  <!-- 
-                    <exclude>**/*.js</exclude>
-                   -->
                     <exclude>**/index.jsp</exclude>
                   </excludes>
                 </resource>
@@ -110,9 +87,6 @@
           </execution>
         </executions>
         <configuration>
-        <!-- 
-          <outputDirectory>${project.build.directory}</outputDirectory>
-         -->
         </configuration>
       </plugin>
       <!-- 
@@ -130,9 +104,6 @@
               <directory>${warDirectory}</directory>
               <includes>
                 <include>**/index.*</include>
-                <!-- 
-                <include>**/jquery-1.8.2.js</include>
-                 -->
               </includes>
             </fileset>
           </filesets>
@@ -146,12 +117,15 @@
       	  <port>${web-port}</port>
       	  <path>/</path>
       	  <warSourceDirectory>${warDirectory}</warSourceDirectory>
-      	  <!-- 
-          <tomcatUsers>D:\Apps\apache-tomcat-7.0.30\conf\tomcat-users.xml</tomcatUsers>
-          <tomcatWebXml>D:\Apps\apache-tomcat-7.0.30\conf\web.xml</tomcatWebXml>
-      	  -->
       	</configuration>
       </plugin>
     </plugins>
   </build>
+  <properties>
+  	<jersey-version>1.16</jersey-version>
+  	<warDirectory>${basedir}/../app</warDirectory>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <web-port>9090</web-port>
+    <db-port>27017</db-port>
+  </properties>
 </project>

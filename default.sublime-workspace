@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"connections"
+			],
+			[
 				"acc",
 				"accounts"
 			],
@@ -51,19 +55,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/D/Repository/git/scribble/docs/Negotiating Skills for V/1. Aspiration and attitude.md",
+			"settings":
+			{
+				"buffer_size": 22914,
+				"line_ending": "Windows",
+				"name": "1"
+			}
+		},
+		{
+			"contents": "Sample Markdown Cheat Sheet\n=========================== \n\nThis is a sample markdown file to help you write Markdown quickly :)\n\nIf you use the fabulous [Sublime Text 2 editor][ST2] along with the [Markdown Preview plugin][MarkdownPreview], open your ST2 Palette with `CMD+P` then choose `Markdown Preview in browser` to see the result in your browser.\n\n## Text basics\nthis is *italic* and this is **bold** .  another _italic_ and another __bold__\n\nthis is `important` text. and percentage signs : % and `%`\n\nThis is a paragraph with a footnote (builtin parser only). [^note-id] \n\nInsert `[ toc ]` without spaces to generate a table of contents (builtin parser only).\n\n## Indentation\n> Here is some indented text\n>> even more indented\n\n## Titles\n# Big title (h1)\n## Middle title (h2)\n### Smaller title (h3)\n#### and so on (hX)\n##### and so on (hX)\n###### and so on (hX)\n\n## Example lists (1)\n\n - bullets can be `-`, `+`, or `*`\n - bullet list 1\n - bullet list 2\n    - sub item 1\n    - sub item 2\n\n        with indented text inside\n\n - bullet list 3\n + bullet list 4\n * bullet list 5\n\n## Links\n\nThis is an [example inline link](http://lmgtfy.com/) and [another one with a title](http://lmgtfy.com/ \"Hello, world\").\n\nLinks can also be reference based : [reference 1][ref1] or [reference 2 with title][ref2].\n\nReferences are usually placed at the bottom of the document\n\n## Images\n\nA sample image :\n\n![revolunet logo](http://www.revolunet.com/static/parisjs8/img/logo-revolunet-carre.jpg \"revolunet logo\")\n\nAs links, images can also use references instead of inline links :\n\n![revolunet logo][revolunet-logo]\n\n\n## Code\n\nIt's quite easy to show code in markdown files.\n\nBackticks can be used to `highlight` some words.\n\nAlso, any indented block is considered a code block.  If `enable_highlight` is `true`, syntax highlighting will be included (for the builtin parser - the github parser does this automatically).\n\n    <script>\n        document.location = 'http://lmgtfy.com/?q=markdown+cheat+sheet';\n    </script>\n\n## Math\n\nWhen `enable_mathjax` is `true`, inline math can be included \\\\(\\frac{\\pi}{2}\\\\) $\\pi$\n\nAlternatively, math can be written on its own line:\n\n$$F(\\omega) = \\frac{1}{\\sqrt{2\\pi}} \\int_{-\\infty}^{\\infty} f(t) \\, e^{ - i \\omega t}dt$$\n\n\\\\[\\int_0^1 f(t) \\mathrm{d}t\\\\]\n\n\\\\[\\sum_j \\gamma_j^2/d_j\\\\]\n\n\n\n## GitHub Flavored Markdown\n\nIf you use the Github parser, you can use some of [Github Flavored Markdown][gfm] syntax :\n\n * User/Project@SHA: revolunet/sublimetext-markdown-preview@7da61badeda468b5019869d11000307e07e07401\n * User/Project#Issue: revolunet/sublimetext-markdown-preview#1\n * User : @revolunet\n\nSome Python code :\n\n```python\nimport random\n\nclass CardGame(object):\n    \"\"\" a sample python class \"\"\"\n    NB_CARDS = 32\n    def __init__(self, cards=5):\n        self.cards = random.sample(range(self.NB_CARDS), 5)\n        print 'ready to play'\n```\n\nSome Javascript code :\n\n```js\nvar config = {\n    duration: 5,\n    comment: 'WTF'\n}\n// callbacks beauty un action\nasync_call('/path/to/api', function(json) {\n    another_call(json, function(result2) {\n        another_another_call(result2, function(result3) {\n            another_another_another_call(result3, function(result4) {\n                alert('And if all went well, i got my result :)');\n            });\n        });\n    });\n})\n```\n\nThe Github Markdown also brings some [nice Emoji support][emoji] : :+1: :heart: :beer:\n\n[^note-id]: This is the text of the note. \n\n## About\n\nThis plugin and this sample file is proudly brought to you by the [revolunet team][revolunet]\n\n [ref1]: http://revolunet.com\n [ref2]: http://revolunet.com \"rich web apps\"\n [MarkdownREF]: http://daringfireball.net/projects/markdown/basics\n [MarkdownPreview]: https://github.com/revolunet/sublimetext-markdown-preview\n [ST2]: http://sublimetext.com\n [revolunet]: http://revolunet.com\n [revolunet-logo]: http://www.revolunet.com/static/parisjs8/img/logo-revolunet-carre.jpg \"revolunet logo\"\n [gfm]: http://github.github.com/github-flavored-markdown/\n [emoji]: http://www.emoji-cheat-sheet.com/\n\n",
+			"settings":
+			{
+				"buffer_size": 4046,
+				"line_ending": "Windows",
+				"name": "Markdown Cheatsheet",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 288.0,
+		"height": 311.0,
 		"selected_items":
 		[
 			[
-				"mark",
-				"Markdown Preview: Preview in Browser"
+				"mar",
+				"Markdown Preview: Open Markdown Cheat sheet"
 			],
 			[
-				"mar",
+				"mark",
 				"Markdown Preview: Preview in Browser"
 			],
 			[
@@ -124,6 +147,51 @@
 	},
 	"file_history":
 	[
+		"/D/Documents/open api/challenges.md",
+		"/D/Documents/open api/requirements_v2.md",
+		"//Rf8f5e/aa_share/reporting app/self service reporting solutions.md",
+		"//rf8f5e/aa_share/open api security/http methods.md",
+		"//Rf8f5e/aa_share/open api security/http methods.md",
+		"/D/Documents/open api/http methods.md",
+		"/D/Repository/git/pecuniary/markdown/mygithub.css",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/markdown.css",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/MarkdownPreview.sublime-settings",
+		"//Rf8f5e/aa_share/open api security/44.html",
+		"//Rf8f5e/aa_share/open api security/requirements.md",
+		"/C/Documents and Settings/cy4y423/Desktop/Start menu.md",
+		"/D/Repository/git/scribble/workspace/objsets/src/main/scala/objsets/TweetSet.scala",
+		"/D/Apps/1.start menus/cy4y423/.gitconfig",
+		"/D/Repository/git/pecuniary/node/add_example.js",
+		"/D/Repository/git/pecuniary/node/server.js",
+		"/D/Repository/git/pecuniary/node/echo.js",
+		"/D/Repository/git/pecuniary/node/rest.js",
+		"/D/Repository/git/pecuniary/node/nca/app.js",
+		"/D/Documents/open api/requirements.md",
+		"/D/Repository/git/scribble/docs/spring_di_and_cdi_comparative.md",
+		"//Rf8f5e/aa_share/open api security/apigee findings.md",
+		"/c/temp/rationals.scala",
+		"/D/Documents/open api/apigee findings.md",
+		"/D/Repository/git/scala-coursera/funsets/src/main/scala/funsets/FunSets.scala",
+		"/D/Repository/git/pecuniary/seed/lib/underscore-1.5.2.js",
+		"/D/temp/trunk/pom.xml",
+		"/D/Workspaces/setenv.sh",
+		"/D/Repository/git/scribble/docs/JAX-RS/RESTful Java with JAX-RS 2.0 Chapter 7.md",
+		"/D/Repository/git/scribble/docs/JAX-RS/RESTful Java with JAX-RS 2.0 Chapter 5.md",
+		"/D/Repository/git/scribble/docs/effective java/item 60.md",
+		"/D/Repository/git/scribble/docs/JAX-RS/RESTful Java with JAX-RS 2.0 Chapter 15.md",
+		"/D/Repository/git/scribble/docs/JAX-RS/RESTful Java with JAX-RS 2.0 Chapter 4.md",
+		"/C/Documents and Settings/cy4y423/Desktop/RESTful Java with JAX-RS 2.0 Chapter 7.md",
+		"/C/Documents and Settings/cy4y423/Desktop/RESTful Java with JAX-RS 2.0 Chapter 15.mdown",
+		"/D/Documents/reporting app/paginator design.md",
+		"/D/Documents/p6/jp thoughts/considerations.md",
+		"/d/temp/exe3.md",
+		"/D/temp/trial/myapp/pom.xml",
+		"/D/temp/ex3.3.md",
+		"/D/temp/counter.scala",
+		"/C/Documents and Settings/cy4y423/.m2/settings.xml",
+		"/D/temp/ex3.1.md",
+		"/D/Downloads/recfun/recfun/src/test/scala/recfun/CountChangeSuite.scala",
 		"/D/Repository/git/pecuniary/demo/js/models/Query2.js",
 		"/D/Documents/reporting app/query-or-filter.md",
 		"/D/Documents/reporting app/query-design.md",
@@ -137,7 +205,6 @@
 		"/D/Documents/reporting app/nextsteps.md",
 		"/C/Documents and Settings/cy4y423/Desktop/post it.md",
 		"/C/Documents and Settings/cy4y423/Desktop/User Accounts.md",
-		"/C/Documents and Settings/cy4y423/.m2/settings.xml",
 		"/C/Documents and Settings/cy4y423/Desktop/javascript - the good part.md",
 		"/C/Documents and Settings/cy4y423/Desktop/WS Portal Admin User ID.txt",
 		"/C/Documents and Settings/cy4y423/Desktop/User.txt",
@@ -153,7 +220,6 @@
 		"/D/Repository/git/pecuniary/demo/js/views/FilterManager.js",
 		"/D/Repository/git/pecuniary/demo/js/models/Account.js",
 		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/dao/Accounts.java",
-		"/D/Documents/reporting app/paginator design.md",
 		"/D/Repository/demo/js/models/Query.js",
 		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/resource/TransactionResource.java",
 		"/D/Repository/git/pecuniary/api/src/main/java/com/bbh/openbbh/api/dao/Transactions.java",
@@ -187,14 +253,12 @@
 		"/D/Repository/git/pecuniary/.gitignore",
 		"/D/Repository/demo/font.html",
 		"/D/Repository/demo/index.html",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/MarkdownPreview.sublime-settings",
 		"/D/Repository/git/pecuniary/markdown/fancy.css",
 		"/D/Repository/git/scrollYou/demo.html",
 		"/D/Documents/open software stack/email to.md",
 		"/D/Documents/reporting app/code-try-outs/i18n.html",
 		"/D/Repository/git/pecuniary/font-test.html",
 		"/d/temp/dummy.asc",
-		"/D/Documents/p6/jp thoughts/considerations.md",
 		"/D/temp/del2/del2/pom.xml",
 		"/D/temp/del2/del2/src/test/java/com/acme/del2/AppTest.java",
 		"/D/Repository/git/cap/poc/pom.xml",
@@ -205,53 +269,12 @@
 		"//rf8f5e/aa_share/p6/Assumptions on Tech Services business model.md",
 		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Package Control/Package Control.sublime-settings",
 		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Default/Preferences.sublime-settings",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
 		"/D/Repository/git/pecuniary/markdown/github.css",
 		"/D/Repository/git/scribble/questions/questions-min.css",
 		"/D/Repository/git/scribble/questions/questions-min.md",
 		"/D/Repository/git/pecuniary/markdown/camel.md",
 		"/D/Repository/git/pecuniary/markdown/camel.css",
-		"/D/Repository/git/pecuniary/markdown/test.md",
-		"/D/Repository/git/pecuniary/markdown/_test.css",
-		"/D/Repository/git/pecuniary/markdown/camel.htm",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap-theme.css",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/css/bootstrap.css",
-		"/D/Repository/git/pecuniary/markdown/custom.css",
-		"/D/Repository/git/pecuniary/markdown/test.css",
-		"/D/Downloads/bootstrap-3.0.0/bootstrap-3.0.0/dist/js/bootstrap.js",
-		"/D/Repository/git/pecuniary/ui/lib/moment-2.3.1.js",
-		"/D/Repository/git/pecuniary/ui/lib/moment.js",
-		"/D/Repository/git/pecuniary/ui/lib/underscore-1.5.2.js",
-		"/D/Repository/git/pecuniary/ui/lib/backbone.js",
-		"/D/temp/trunk/StandardReportsWeb/src/test/groovy/com/bbh/standardreports/service/favorite/FavoriteConstructionHelper.groovy",
-		"/D/temp/trunk/StandardReportsWeb/src/main/java/com/bbh/standardreports/service/favorite/jersey/JerseyFavoriteApi.java",
-		"/D/temp/trunk/StandardReportsWeb/src/test/java/com/bbh/standardreports/service/UserAuthenticator.java",
-		"/D/temp/del/coverage/target/coverage.em",
-		"/d/temp/cheat.md",
-		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/CMS-Allocations2.html",
-		"/D/temp/globalcss/NewBBHDesign/GlobalStyle/trunk/Overdraft-Rate-Lookup2.html",
-		"/d/temp/del.md",
-		"/D/Workspaces/ecieCommons/.svn/entries",
-		"/D/Workspaces/ecieCommons/.svn/format",
-		"/D/Documents/UTR/jp design notes/_logs.md",
-		"/D/Documents/UTR/jp design notes/todo.md",
-		"/D/Repository/git/cap/camelinaction-source/chapter6/pom.xml",
-		"/D/Repository/git/cap/camelinaction-source/pom.xml",
-		"//Rf8f5e/aa_share/utr/discussion_with_faz.md",
-		"/D/Documents/UTR/jp design notes/Outstanding Questions.md",
-		"/D/Documents/UTR/jp design notes/Corporate Actions.md",
-		"/D/Documents/UTR/jp design notes/cypher.md",
-		"/D/Documents/UTR/jp design notes/logs.md",
-		"/D/Apps/Sublime Text 2.0.2/Data/Packages/User/Preferences.sublime-settings",
-		"/D/Documents/UTR/jp design notes/interface.md",
-		"/D/Documents/UTR/jp design notes/specs.md",
-		"/D/Documents/UTR/jp design notes/presso.md",
-		"/D/Documents/UTR/jp design notes/corpaction.md",
-		"/D/Documents/UTR/jp design notes/draft.md",
-		"/D/Repository/git/scribble/docs/corpaction.md",
-		"/D/Repository/git/scribble/docs/draft.md",
-		"/D/Repository/git/scribble/docs/specs.md",
-		"/D/Workspaces/juno/effectivejava/JUnitInAction/pom.xml"
+		"/D/Repository/git/pecuniary/markdown/test.md"
 	],
 	"find":
 	{
@@ -259,7 +282,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"D:\\Repository\\git\\pecuniary\\demo\\js",
@@ -271,6 +294,80 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n",
+			"]\n",
+			"revolunet logo",
+			"\n",
+			"\n	",
+			"PUT/DELETE",
+			"http ",
+			"accounts",
+			"descendingByRetweet",
+			"mostRetweetedAcc",
+			"map",
+			"\n	  ",
+			"\\bin",
+			"IllegalArgumentException",
+			"generictype",
+			"type",
+			"	   ",
+			"   ",
+			"complex",
+			"	   ",
+			"	               ",
+			"	   ",
+			"	         ",
+			" ",
+			"\n                       ",
+			"  - ",
+			"- @",
+			"This",
+			"@",
+			" @Path ",
+			"	",
+			"@",
+			"	",
+			"@RolesAllowed",
+			">",
+			"<",
+			"<.+>",
+			"<.*+>",
+			"<.?+>",
+			"nonce ",
+			"WWW-Authenticate ",
+			"%",
+			"%/",
+			";",
+			"\\",
+			"D:\\",
+			"set ",
+			"+ ",
+			"### ",
+			"- 4",
+			"5 %",
+			"6 %",
+			"repository",
+			"3 -",
+			"4 -",
+			"5 -",
+			"6 -",
+			"(1,2,3)",
+			")	",
+			"\n		",
+			"(*)",
+			"count",
+			"6 %",
+			"0 %",
+			"1 %",
+			"2 %",
+			"3 %",
+			"4 %",
+			"1 %",
+			"2 %",
+			"3 %",
+			"4 %",
+			"\n	",
+			"\n				",
 			"\n            ",
 			"querySuccess",
 			"execute",
@@ -324,81 +421,7 @@
 			"=",
 			"\n	",
 			"table",
-			"\n",
-			"product offerings",
-			"•",
-			"╩",
-			"║",
-			"╩",
-			"║",
-			"╣",
-			"╠",
-			"╬",
-			"╗",
-			"╦",
-			"═",
-			"╔═══════════════╦═══════════════════╦═══════════════════╦═════════════════════╗",
-			"║",
-			"map",
-			"code",
-			"a.",
-			"visit",
-			"color:",
-			"../",
-			"\\",
-			"commons-logging",
-			"constructCreateFavoriteService",
-			"constructFavorite",
-			"createFavoriteService",
-			"gmaven-plugin",
-			"gmaven",
-			"uniqueValue",
-			"\n####",
-			"### ",
-			"\n",
-			"item",
-			"hash table",
-			"hashtab",
-			"\n##",
-			"table",
-			"allocations",
-			"tooltip",
-			"\n`[",
-			"java",
-			"interface",
-			"POSITION",
-			"MPR",
-			"     1",
-			"     ",
-			"    1",
-			"\n    ",
-			"    ",
-			"version",
-			"3. Transmission / Delivery channel",
-			"\n###",
-			"each",
-			"### Transmission / Delivery channel",
-			"### Message Format",
-			"### Message content",
-			"\n(",
-			"*",
-			"\n*",
-			"    *",
-			"*",
-			"once",
-			"source",
-			"???",
-			"int",
-			"UTR",
-			"VUS",
-			"destination",
-			"eip",
-			"Event Sink",
-			"for each",
-			"Infomediary",
-			"Infomediaray",
-			"event source adapters",
-			"bbh"
+			"\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -406,6 +429,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"`PUT`/`DELETE`",
 			"# ",
 			"- ",
 			"# ",
@@ -428,8 +452,63 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/D/Repository/git/scribble/docs/Negotiating Skills for V/1. Aspiration and attitude.md",
+					"settings":
+					{
+						"buffer_size": 22914,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								20448,
+								20448
+							]
+						],
+						"settings":
+						{
+							"auto_name": "1",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4716.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 4046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -497,6 +576,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 290.0,
+	"side_bar_width": 246.0,
 	"status_bar_visible": true
 }
