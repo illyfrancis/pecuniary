@@ -13,24 +13,26 @@ require.config({
   },
   shim: {
     'underscore': {
-      exports: '_'
+        exports: '_'
     },
     'backbone': {
-      deps: ['underscore', 'jquery'],
-      exports: 'Backbone'
+        deps: ['underscore', 'jquery'],
+        exports: 'Backbone'
     },
     'jquery.ui': {
-      deps: ['jquery']
+        deps: ['jquery']
     },
     'bootstrap': {
-      deps: ['jquery', 'jquery.ui']
+        deps: ['jquery', 'jquery.ui']
     },
     'typeahead': {
-      deps: ['jquery']
+        deps: ['jquery']
     }
   }
   // ,
   // urlArgs: 'bust=' + (new Date()).getTime()
 });
 
-require(['init'], function () {});
+require(['typeahead-init'], function () {});
+
+console.log('loaded');

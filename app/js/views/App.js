@@ -1,5 +1,5 @@
 /*global define*/
-define(['backbone'], function(Backbone) {
+define(['backbone', 'views/DataEntry'], function(Backbone, DataEntry) {
   return Backbone.View.extend({
     el: 'body',
     load: function() {
@@ -7,6 +7,8 @@ define(['backbone'], function(Backbone) {
     },
     render: function() {
       this.$el.append("<div>In main</div>");
+      var dataEntry = new DataEntry();
+      this.$el.append(dataEntry.render().el)
       return this;
     }
   });

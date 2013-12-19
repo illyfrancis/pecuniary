@@ -10,14 +10,15 @@ define([
     'underscore',
     'backbone',
     'bootstrap',
+    'typeahead',
     'apps/Extension2',
 //    'apps/EventBus'
 //    'apps/Repository',
 //    'apps/Mediator'
 //    'views/BogoApp'
     'views/App'
-//], function ($, _, Backbone, Bootstrap, Extension, EventBus, Repository, Mediator, BogoApp) {
-], function ($, _, Backbone, Bootstrap, Extension, App) {
+//], function ($, _, Backbone, Bootstrap, Typeahead, Extension, EventBus, Repository, Mediator, BogoApp) {
+], function ($, _, Backbone, Bootstrap, Typeahead, Extension, App) {
 
     // disable cache (esp for IE)
     $.ajaxSetup({ cache: false });
