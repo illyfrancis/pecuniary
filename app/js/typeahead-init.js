@@ -1,4 +1,4 @@
-define(['underscore', 'typeahead', 'Baz'], function(_, tt, Baz) {
+define(['underscore', 'typeahead', 'datepicker'], function(_, tt, dp) {
   $('.places').typeahead({
     name: 'places',
     local: ["Alabama","Alaska","Akka","Amanda","Aioki","Ado","West Virginia","Wisconsin","Wyoming"]
@@ -37,4 +37,6 @@ define(['underscore', 'typeahead', 'Baz'], function(_, tt, Baz) {
       filter: transform
     }
   });
+
+  $('.checkIn').datepicker();
 })

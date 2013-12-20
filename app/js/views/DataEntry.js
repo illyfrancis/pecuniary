@@ -1,8 +1,13 @@
 define([
   'underscore',
   'backbone',
-  'text!templates/DataEntry.html'
-], function (_, Backbone, tpl) {
+  'text!templates/DataEntry.html',
+  'datepicker'
+], function (_, Backbone, tpl, dp) {
+// define([
+//   'text!templates/DataEntry.html',
+//   'datepicker'
+// ], function (tpl, dp) {
 
   return Backbone.View.extend({
 
@@ -12,7 +17,13 @@ define([
 
     events: {
       'click .destroy': 'destroy',
-      'typeahead:selected': 'tell'
+      'typeahead:selected': 'tell',
+      'clearDate': 'messageFromDatePicker',
+      'changeDate': 'messageFromDatePicker',
+      'changeYear': 'messageFromDatePicker',
+      'changeMonth': 'messageFromDatePicker',
+      // ,
+      // 'onRender .checkIn': 'messageFromDatePicker'
     },
 
     initialize: function () {
@@ -22,12 +33,12 @@ define([
     render: function () {
       // this.$el.empty(); -> $.html() internally calls .empty() before appending
       this.$el.html(this.template());
-      this.$(".donation").typeahead({
+      this.$('.donation').typeahead({
         name: 'places',
         remote: {
-          url: "api/securities/search/%QUERY",
-          filter: function(securities) {
-            return _.map(securities, function(item) {
+          url: 'api/securities/search/%QUERY',
+          filter: function (securities) {
+            return _.map(securities, function (item) {
               return {
                 value: item.secId,
                 tokens: [item.secId],
@@ -38,6 +49,10 @@ define([
         },
         limit: 10
       });
+      this.$('.checkIn, .checkOut').datepicker({
+        autoclose: true
+      });
+      // this.delegateEvents();
       return this;
     },
 
@@ -51,6 +66,10 @@ define([
 
     destroy: function () {
       this.$('.donation').typeahead('destroy');
+    },
+
+    messageFromDatePicker: function (e) {
+      console.log('datepicker event [' + e.type + "] : " + e.date);
     }
   });
 

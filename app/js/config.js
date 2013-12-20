@@ -3,9 +3,9 @@ require.config({
   // baseUrl: '.',
   paths: {
     'jquery': '../lib/jquery-1.9.1',
-    'jquery.ui': '../lib/jquery-ui-1.9.0.custom',
     'bootstrap': '../lib/bootstrap-3.0.3/js/bootstrap',
     'typeahead': '../lib/typeahead-0.9.3',
+    'datepicker': '../lib/bootstrap-datepicker/js/bootstrap-datepicker',
     'underscore': '../lib/underscore-1.5.2',
     'backbone': '../lib/backbone-1.1.0',
     'moment': '../lib/moment-2.3.1',
@@ -13,20 +13,20 @@ require.config({
   },
   shim: {
     'underscore': {
-      exports: '_'
+        exports: '_'
     },
     'backbone': {
-      deps: ['underscore', 'jquery'],
-      exports: 'Backbone'
-    },
-    'jquery.ui': {
-      deps: ['jquery']
+        deps: ['underscore', 'jquery'],
+        exports: 'Backbone'
     },
     'bootstrap': {
-      deps: ['jquery', 'jquery.ui']
+        deps: ['jquery']
     },
     'typeahead': {
-      deps: ['jquery']
+        deps: ['bootstrap']
+    },
+    'datepicker': {
+        deps: ['bootstrap']
     }
   }
   // ,

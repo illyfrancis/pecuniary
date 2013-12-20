@@ -6,6 +6,7 @@ require.config({
     'jquery.ui': '../lib/jquery-ui-1.9.0.custom',
     'bootstrap': '../lib/bootstrap-3.0.3/js/bootstrap',
     'typeahead': '../lib/typeahead-0.9.3',
+    'datepicker': '../lib/datepicker/js/bootstrap-datepicker',
     'underscore': '../lib/underscore-1.5.2',
     'backbone': '../lib/backbone-1.1.0',
     'moment': '../lib/moment-2.3.1',
@@ -26,7 +27,10 @@ require.config({
         deps: ['jquery', 'jquery.ui']
     },
     'typeahead': {
-        deps: ['jquery']
+        deps: ['bootstrap']
+    },
+    'datepicker': {
+        deps: ['bootstrap']
     }
   }
   // ,
