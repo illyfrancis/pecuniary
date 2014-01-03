@@ -4,19 +4,13 @@
       version="3.0"> 
        
   <servlet>
-    <display-name>Transaction Report</display-name>
-    <servlet-name>TransactionReport</servlet-name>
-    <servlet-class>com.bbh.reporting.TransactionReport</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet>
     <servlet-name>jersey-serlvet</servlet-name>
     <servlet-class>
       com.sun.jersey.spi.container.servlet.ServletContainer
     </servlet-class>
     <init-param>
       <param-name>com.sun.jersey.config.property.packages</param-name>
-      <param-value>com.bbh.openbbh.api</param-value>
+      <param-value>illyfrancis.pecuniary</param-value>
     </init-param>
     <init-param>
       <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
@@ -25,11 +19,7 @@
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
-    <servlet-name>TransactionReport</servlet-name>
-    <url-pattern>/tr/*</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
     <servlet-name>jersey-serlvet</servlet-name>
-    <url-pattern>/foo/*</url-pattern>
+    <url-pattern>/service/*</url-pattern>
   </servlet-mapping>
 </web-app>
