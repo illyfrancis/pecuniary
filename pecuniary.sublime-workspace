@@ -1,0 +1,604 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"save",
+				"savePreference"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"th",
+				"thead"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"delega",
+				"delegateEvents(events)	backbone.js"
+			],
+			[
+				"s",
+				"strong"
+			],
+			[
+				"search-",
+				"search-criteria-security"
+			],
+			[
+				"SearchC",
+				"SearchCriteriaTab"
+			],
+			[
+				"to",
+				"toEqual(expected)	jasmine.js"
+			],
+			[
+				"setField",
+				"setFieldFilter( fieldFilterRules )	backbone.paginator.js"
+			],
+			[
+				"setFi",
+				"setFilter( fields, filter )	backbone.paginator.js"
+			],
+			[
+				"Episo",
+				"Episode"
+			],
+			[
+				"tog",
+				"toggleSelection(checked)	collections.js"
+			],
+			[
+				"se",
+				"selected()	collections.js"
+			],
+			[
+				"beforE",
+				"beforeEach(beforeEachFunction)	jasmine.js"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/JSHint/JSHint.sublime-build",
+	"command_palette":
+	{
+		"height": 107.0,
+		"selected_items":
+		[
+			[
+				"maven",
+				"Maven: Kill running process"
+			],
+			[
+				"",
+				"JSHint"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 346.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Jun/Work/workspace/git/pecuniary/money/js/models/Category.js",
+		"/Users/Jun/Work/workspace/git/pecuniary/money/js/models/Transaction.js",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/mockup/navbar-static-top6.html",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/mockup/navbar-static-top2.html",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/mockup/navbar-static-top5.html",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/test/jasmine/spec/models/QuerySpec.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/models/Query.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/apps/Repository.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/BogoApp.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/PreferenceDropdown.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/apps/Mediator.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/PreferenceItem.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/AppMenu.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/main.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/events/Repository.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/init.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/BaseView.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4/js/views/AccountList.js",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/files/js/views/Application.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.latest/js/views/AccountRow.js",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.latest/js/templates/AccountRow.html",
+		"/Users/Jun/Work/workspace/git/bogo/bogosuh.latest/js/models/Account.js",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/files/js/models/Answers.js",
+		"/Users/Jun/Work/workspace/git/bogo/prototypes/files/js/views/FileSelector.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/SearchFilterHelper.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/SecurityIdFilter.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/models/Security.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/typeahead.html",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/typeahead.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/lib/bootstrap.js",
+		"/Users/Jun/Work/workspace/francis-trial/api/src/main/java/com/bbh/openbbh/api/dao/Securities.java",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/AccountFilter.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/models/SecurityIdCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/models/AccountCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/AccountRow.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/templates/AccountFilter.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/lib/bootstrap.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/concatenated-modules.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/BogoApp.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/collections/SearchCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/models/ReportCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/css/bootstrap.css",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/bogosuh.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/templates/SecurityIdFilter.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/templates/SecurityIdRow.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/collections/Securities.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/collections/PaginatedAccounts.js",
+		"/Users/Jun/Work/workspace/francis-trial/api/src/main/db/scripts/.dbshell",
+		"/Users/Jun/Work/workspace/francis-trial/api/src/main/db/scripts/import.sh",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/build/concatenated-uglified-modules.build.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/build/build.sh",
+		"/Users/Jun/Work/workspace/git/github-trial/require-simpler/build/try.js",
+		"/Users/Jun/Work/workspace/git/github-trial/require-simpler/build/build.sh",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/lib/bootstrap2.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/main.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/lib/bootstrap.min.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/build/concatenated-modules.build.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/views/SearchResult.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/build/concatenated-uglified-noLicenseComments-modules.build.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/bogosuh-opt.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/concatenated-uglified-noLicenseComments-modules.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js/init.js",
+		"/Users/Jun/Work/workspace/francis-trial/api/pom.xml",
+		"/Users/Jun/Work/workspace/francis-trial/api/src/main/java/com/bbh/openbbh/api/WineResource.java",
+		"/Users/Jun/Work/workspace/francis-trial/api/src/main/java/com/bbh/openbbh/api/ProductResource.java",
+		"/Users/Jun/Work/workspace/francis-trial/zzz/js/collections/PaginatedAccounts.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/init.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/init-orig.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts-one copy.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts-copy.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts-copy1.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts-one.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts-copy2.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts1.js",
+		"/Users/Jun/Work/workspace/git/speed-check/bogosuh/js/fake/accounts copy.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/mockup-app-security.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/bogo.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/mockup-tree.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/mockup-app.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/ReportColumn.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/collections/ReportSchema.js",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/js/AppReportColumnSelection.js",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/js/views/ReportColumnSelector.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/ReportColumnSelector.js",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/report-column-selection.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/BogoApp.js",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/js/collections/ReportSchema.js",
+		"/Users/Jun/Library/Application Support/Sublime Text 2/Packages/JsFormat/Default (OSX).sublime-keymap",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/ReportColumnItem.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/column-header.html",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/column-header.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/css/bootstrap.css",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/Account.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/ReportCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/FilterStatusBadge.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/FilterStatusBar.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/SearchFilterPopup.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/SearchFilterType.js",
+		"/Users/Jun/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/class names.txt",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/AccountCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/SecurityCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/test/spec.runner.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/collections/SearchCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/navbar.html",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/filter-popup.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/models/BaseCriteria.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/test/spec/collections/SearchCriteria.spec.js",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/test/spec/PaginatedAccounts.spec.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/test/spec/models/AccountCriteria.spec.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/collections/PaginatedAccounts.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/lib/backbone.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/AccountFilter.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/template-method.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/template-method.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/test/spec/models/Account.spec.js",
+		"/Users/Jun/Work/workspace/francis-trial/mockup/filter-popup.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/SearchFilterTab.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/SecurityFilter.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/AccountPaginator.js",
+		"/Users/Jun/Work/workspace/francis-trial/zetest/js/nested-view-test.js",
+		"/Users/Jun/Work/workspace/francis-trial/zetest/nested-view-test.html",
+		"/Users/Jun/Work/workspace/francis-trial/zetest/mixin-test.html",
+		"/Users/Jun/Work/workspace/francis-trial/home/accounts/modaltab.html",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/mockup-button-dropdown.html",
+		"/Users/Jun/Work/workspace/francis-trial/_bbb/lib/bootstrap.2.1.1.js",
+		"/Users/Jun/Work/workspace/francis-trial/bogo/js/views/AccountSearchFilter.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/Jun/Work/workspace/git/bogo/bogosuh.v4",
+			"/Users/Jun/Work/workspace/francis-trial/bogosuh.di/js",
+			"/Users/Jun/Work/workspace/francis-trial/bogoshu.di/js",
+			"/Users/Jun/Work/workspace/francis-trial/bogo/",
+			"/Users/Jun/Work/workspace/francis-trial/bogo/js",
+			"/Users/Jun/Work/workspace/francis-trial/home/accounts/",
+			"/Users/Jun/Work/workspace/francis-trial/bogo"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Transaction",
+			"Account",
+			".btn-link",
+			"btn-info btn-mini",
+			"mail",
+			"5",
+			"strong",
+			"\"></i>",
+			".save",
+			"'loadprefere",
+			"savePreference",
+			"\"",
+			"0015594",
+			"AccountFilter",
+			"new AccountFilter",
+			"parse",
+			"z-index",
+			"bootstrap",
+			"\": \"",
+			"\\},\\{\\n",
+			"\\},\\{",
+			"}, {",
+			"number\": \"",
+			"name\": \"",
+			"\\n(\\}, \\{)",
+			"\\n\"number",
+			"\\t",
+			"trigger",
+			"monogram",
+			"xx",
+			"<input type=\"checkbox\">",
+			"<input type=\"checkbox\"></td></tr>",
+			"inline",
+			"reportcolumn",
+			"chevron",
+			"<a class=\"btn\">",
+			"</a>",
+			"<a class=\"btn\">",
+			".caret",
+			".car",
+			"<i",
+			"BaseCriteria",
+			"\n	",
+			"BaseCriteria",
+			"tpl-account-search",
+			"l",
+			"bar",
+			"transform",
+			"SearchFilterTab",
+			".filter",
+			": function",
+			"doFilter",
+			"applyFilter",
+			"changeFilterType",
+			"setFilterType",
+			"appendTab",
+			"caret",
+			"filter",
+			"searchfilter",
+			"filter",
+			"_itemViews",
+			"render()",
+			"getFilterView",
+			"filter",
+			"Filter",
+			"filter",
+			"AccountFilter",
+			"searchAccount",
+			"SearchAccount",
+			"searchAccount",
+			"SearchAccount",
+			"template-account-paginator",
+			"AccountItem",
+			"template-account-item",
+			"addFilterButton",
+			"showFilterButtons",
+			"filter",
+			"tpl",
+			"tpl-report-filter-button",
+			"filter",
+			"initFilters",
+			"filter",
+			"searchFilters",
+			"SearchFilters",
+			"searchFilters",
+			"},\n",
+			"searchFilters",
+			"SearchFilters",
+			"searchFilters",
+			"SearchFilters",
+			"SecurityFilters",
+			"SecurityFilter",
+			"securityFilter",
+			"accountCriteria",
+			"SecurityFilter",
+			"AccountCriteria",
+			"SecurityFilter",
+			"AccountFilter",
+			"SecurityFilter",
+			"accountFilter",
+			"SearchFilter",
+			"    <script type=\"text/javascript\" src=\"js/views/AccountFilter.js\"></script>\n    <script type=\"text/javascript\" src=\"js/views/AccountFilter.js\"></script>\nSearchFilter",
+			"SecuritySearchCriteria",
+			"AccountSearchCriteria",
+			"searchcriteria",
+			"SearchCriteria",
+			"SearchCriteriaBar",
+			"//",
+			"getFilterView",
+			"SearchCriteriaTab",
+			"noop",
+			"searchCriteria",
+			"SearchCriteria",
+			"searchCriteria",
+			"SearchReportFilter",
+			"SearchCriteria",
+			"ReportFilter",
+			"ReportCriteria",
+			"reportCriteria",
+			"ReportCriteria",
+			"reportCriteria",
+			"ReportFilter",
+			"searchCriteriaBar",
+			"ReportFilter",
+			"searchFilterBar",
+			"reportFilterBar",
+			"ReportFilter",
+			"ReportApp"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"'",
+			"\":\"",
+			"\\},\\n\\{",
+			"},{",
+			"number\":\"",
+			"name\":\"",
+			"$1",
+			"\"number",
+			"",
+			"<i class=\"icon-ok\"></i>",
+			"<button type=\"button\" class=\"btn\">",
+			"</button>",
+			"<button type=\"button\" class=\"btn\">",
+			"ReportCriteria",
+			"tpl-account-paginator",
+			"FilterStatusBar",
+			"SearchFilter"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 368.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"top5",
+				"prototypes/mockup/navbar-static-top5.html"
+			],
+			[
+				"top2",
+				"prototypes/mockup/navbar-static-top2.html"
+			],
+			[
+				"navstat",
+				"prototypes/mockup/navbar-static-top.html"
+			],
+			[
+				"query",
+				"bogosuh.v4/js/models/Query.js"
+			],
+			[
+				"querysp",
+				"bogosuh.v4/test/jasmine/spec/models/QuerySpec.js"
+			],
+			[
+				"prefei",
+				"bogosuh.v4/js/views/PreferenceItem.js"
+			],
+			[
+				"reposi",
+				"bogosuh.v4/js/apps/Repository.js"
+			],
+			[
+				"m.js",
+				"bogosuh.v4/js/apps/Mediator.js"
+			],
+			[
+				"pd",
+				"bogosuh.v4/js/views/PreferenceDropdown.js"
+			],
+			[
+				"ba",
+				"bogosuh.v4/js/views/BogoApp.js"
+			],
+			[
+				"bv",
+				"bogosuh.v4/js/views/BaseView.js"
+			],
+			[
+				"bogoapp",
+				"bogosuh.v4/js/views/BogoApp.js"
+			],
+			[
+				"repos",
+				"bogosuh.v4/js/events/Repository.js"
+			],
+			[
+				"account",
+				"bogosuh.latest/js/models/Account.js"
+			],
+			[
+				"secu",
+				"francis-trial/bogosuh.di/js/models/Security.js"
+			],
+			[
+				"sif",
+				"francis-trial/bogosuh.di/js/views/SecurityIdFilter.js"
+			],
+			[
+				"sfh",
+				"francis-trial/bogosuh.di/js/views/SearchFilterHelper.js"
+			],
+			[
+				"reportcri",
+				"francis-trial/bogosuh.di/js/models/ReportCriteria.js"
+			],
+			[
+				"searchcri",
+				"francis-trial/bogosuh.di/js/collections/SearchCriteria.js"
+			],
+			[
+				"bootstrap",
+				"francis-trial/bogosuh.di/lib/bootstrap.js"
+			],
+			[
+				"af.html",
+				"francis-trial/bogosuh.di/js/templates/AccountFilter.html"
+			],
+			[
+				"backbone.js",
+				"bogosuh/lib/backbone.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true
+}
