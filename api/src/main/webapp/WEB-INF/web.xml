@@ -30,6 +30,10 @@
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>jersey-serlvet</servlet-name>
+<<<<<<< HEAD
     <url-pattern>/api/*</url-pattern>
+=======
+    <url-pattern>/foo/*</url-pattern>
+>>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
   </servlet-mapping>
 </web-app>

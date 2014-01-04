@@ -1,3 +1,76 @@
+####################
+## Ignore test data
+####################
+
+response.js
+concatenated*
+api/src/main/db/data/*.json
+api/src/main/db/data/*.export
+api/src/main/db/data2/data/*.export
+
+#################
+## Node
+#################
+
+node/*
+
+#################
+## Eclipse
+#################
+
+*.pydevproject
+.project
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+############
+## Maven
+############
+
+target/
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+####################################
+## Sublime project and workspace
+####################################
+
+*.sublime-project
+*.sublime-workspace
+
+####################################
+## Defaults
+####################################
+
 lib-cov
 *.seed
 *.log
@@ -12,3 +85,4 @@ logs
 results
 
 npm-debug.log
+
