@@ -20,13 +20,9 @@ public class Accounts {
 	}
 
 	public static List<Model> get() {
-<<<<<<< HEAD
-		return newArrayList(accounts.find().as(Model.class));
-=======
 		return newArrayList(accounts.find()
 			.limit(2000)	// there are 5408 but it's too big
 			.as(Model.class));
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
 	}
 
 	public static Model get(String id) {

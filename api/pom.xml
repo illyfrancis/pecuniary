@@ -22,13 +22,13 @@
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
-    	<artifactId>jersey-servlet</artifactId>
-      	<version>1.16</version>
+            <artifactId>jersey-servlet</artifactId>
+              <version>1.16</version>
     </dependency>
     <dependency>
       <groupId>com.sun.jersey</groupId>
-    	<artifactId>jersey-json</artifactId>
-      	<version>1.16</version>
+            <artifactId>jersey-json</artifactId>
+              <version>1.16</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -49,7 +49,6 @@
   </dependencies>
   <build>
     <finalName>api</finalName>
-<<<<<<< HEAD
     <!-- 
     <resources>
       <resource>
@@ -58,8 +57,6 @@
       </resource>
     </resources>
      -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -76,11 +73,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
         <version>2.6</version>
-<<<<<<< HEAD
         <!-- 
          -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
         <executions>
           <execution>
             <id>copy-resources</id>
@@ -91,25 +85,19 @@
             <configuration>
               <outputDirectory>${warDirectory}</outputDirectory>
               <resources>
-<<<<<<< HEAD
               <!-- 
                 <resource>
                   <directory>D:\Repository\git\francis-trial\home\js</directory>
                   <filtering>false</filtering>
                 </resource>
                -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
                 <resource>
                   <directory>${basedir}/src/main/webapp</directory>
                   <filtering>false</filtering>
                   <excludes>
-<<<<<<< HEAD
                   <!-- 
                     <exclude>**/*.js</exclude>
                    -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
                     <exclude>**/index.jsp</exclude>
                   </excludes>
                 </resource>
@@ -118,12 +106,9 @@
           </execution>
         </executions>
         <configuration>
-<<<<<<< HEAD
         <!-- 
           <outputDirectory>${project.build.directory}</outputDirectory>
          -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
         </configuration>
       </plugin>
       <!-- 
@@ -141,49 +126,33 @@
               <directory>${warDirectory}</directory>
               <includes>
                 <include>**/index.*</include>
-<<<<<<< HEAD
                 <!-- 
                 <include>**/jquery-1.8.2.js</include>
                  -->
-=======
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
               </includes>
             </fileset>
           </filesets>
         </configuration>
       </plugin>
       <plugin>
-      	<groupId>org.apache.tomcat.maven</groupId>
-      	<artifactId>tomcat7-maven-plugin</artifactId>
-      	<version>2.0</version>
-      	<configuration>
-<<<<<<< HEAD
-      	  <port>9090</port>
-      	  <path>/</path>
-      	  <warSourceDirectory>${warDirectory}</warSourceDirectory>
-      	  <!-- 
+              <groupId>org.apache.tomcat.maven</groupId>
+              <artifactId>tomcat7-maven-plugin</artifactId>
+              <version>2.0</version>
+              <configuration>
+                <port>9090</port>
+                <path>/${project.build.finalName}</path>
+                <warSourceDirectory>${warDirectory}</warSourceDirectory>
+                <!-- 
           <tomcatUsers>D:\Apps\apache-tomcat-7.0.30\conf\tomcat-users.xml</tomcatUsers>
           <tomcatWebXml>D:\Apps\apache-tomcat-7.0.30\conf\web.xml</tomcatWebXml>
-      	  -->
-=======
-      	  <port>${web-port}</port>
-      	  <path>/</path>
-      	  <warSourceDirectory>${warDirectory}</warSourceDirectory>
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
-      	</configuration>
+                -->
+              </configuration>
       </plugin>
     </plugins>
   </build>
   <properties>
-  	<jersey-version>1.16</jersey-version>
-<<<<<<< HEAD
-  	<warDirectory>${basedir}/../bogosuh.v5</warDirectory>
+          <jersey-version>1.16</jersey-version>
+          <warDirectory>${basedir}/../app</warDirectory>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-=======
-  	<warDirectory>${basedir}/../app</warDirectory>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <web-port>9090</web-port>
-    <db-port>27017</db-port>
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
   </properties>
 </project>

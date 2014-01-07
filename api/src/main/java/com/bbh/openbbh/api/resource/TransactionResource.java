@@ -1,10 +1,7 @@
 package com.bbh.openbbh.api.resource;
 
-<<<<<<< HEAD
-=======
 import static com.google.common.collect.Lists.newArrayList;
 
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
 import java.util.Date;
 import java.util.List;
 
@@ -99,9 +96,6 @@ public class TransactionResource {
         }
 
 		public String getCriteria() {
-<<<<<<< HEAD
-			return this.criteria;
-=======
 			String template = this.criteria;
 			if (this.criteria != null && !this.criteria.isEmpty()) {
 				template = this.criteria.replaceAll("\"\\#date(.+?)\"", "#");
@@ -134,7 +128,6 @@ public class TransactionResource {
 			} while (index >= 0);
 			
 			return dates.toArray();
->>>>>>> 2677b0d75b0959762136978f5b15485e5a5d33cf
 		}
 		
 		public String getSort() {
