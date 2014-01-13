@@ -1,42 +1,36 @@
 package illyfrancis.pecuniary.provider;
 
-import static org.codehaus.jackson.annotate.JsonAutoDetect.Visibility.ANY;
-import static org.codehaus.jackson.map.DeserializationConfig.Feature.AUTO_DETECT_SETTERS;
-import static org.codehaus.jackson.map.DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES;
-import static org.codehaus.jackson.map.SerializationConfig.Feature.AUTO_DETECT_GETTERS;
-import static org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_DEFAULT;
-
-import illyfrancis.pecuniary.resource.AccountResource;
-
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 
 import org.bson.types.ObjectId;
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonParser;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.Version;
-import org.codehaus.jackson.map.DeserializationContext;
-import org.codehaus.jackson.map.JsonDeserializer;
-import org.codehaus.jackson.map.JsonSerializer;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.SerializerProvider;
-import org.codehaus.jackson.map.introspect.VisibilityChecker.Std;
-import org.codehaus.jackson.map.module.SimpleModule;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonSerializer;
+import com.fasterxml.jackson.databind.MapperFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.introspect.JacksonAnnotationIntrospector;
+import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
 @Provider
 public class JacksonMapperProvider implements ContextResolver<ObjectMapper> {
 
-    final static Logger logger = LoggerFactory.getLogger(JacksonMapperProvider.class);
     private final ObjectMapper mapper;
 
     public JacksonMapperProvider() {
         mapper = createMapper();
-        logger.info("constructor");
     }
 
     public ObjectMapper getContext(Class<?> type) {
@@ -45,15 +39,20 @@ public class JacksonMapperProvider implements ContextResolver<ObjectMapper> {
 
     private static ObjectMapper createMapper() {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(AUTO_DETECT_GETTERS, false);
-        mapper.configure(AUTO_DETECT_SETTERS, false);
-        mapper.setDeserializationConfig(mapper.getDeserializationConfig().without(FAIL_ON_UNKNOWN_PROPERTIES));
-        mapper.setSerializationConfig(mapper.getSerializationConfig().withSerializationInclusion(NON_DEFAULT));
-        mapper.setVisibilityChecker(Std.defaultInstance().withFieldVisibility(ANY));
+        mapper.disable(MapperFeature.AUTO_DETECT_GETTERS);
+        mapper.disable(MapperFeature.AUTO_DETECT_SETTERS);
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
 
-        mapper.registerModule(new SimpleModule("jersey", new Version(1, 0, 0, null)) //
-                        .addSerializer(_id, _idSerializer()) //
-                        .addDeserializer(_id, _idDeserializer()));
+        VisibilityChecker<?> checker = mapper.getSerializationConfig()
+                .getDefaultVisibilityChecker();
+        mapper.setVisibilityChecker(checker.withFieldVisibility(JsonAutoDetect.Visibility.ANY));
+
+        mapper.registerModule(new SimpleModule("jersey") //
+                .addSerializer(_id, _idSerializer()) //
+                .addDeserializer(_id, _idDeserializer()));
+
+        mapper.setAnnotationIntrospector(new ObjectIdIntrospector());
         return mapper;
     }
 
@@ -61,17 +60,35 @@ public class JacksonMapperProvider implements ContextResolver<ObjectMapper> {
 
     private static JsonDeserializer<ObjectId> _idDeserializer() {
         return new JsonDeserializer<ObjectId>() {
-            public ObjectId deserialize(JsonParser jp, DeserializationContext ctxt) throws IOException, JsonProcessingException {
-                return new ObjectId(jp.readValueAs(String.class));
+            @Override
+            public ObjectId deserialize(JsonParser jsonParser,
+                    DeserializationContext deserializationContext) throws IOException,
+                    JsonProcessingException {
+                return new ObjectId(jsonParser.readValueAs(String.class));
             }
         };
     }
 
     private static JsonSerializer<Object> _idSerializer() {
         return new JsonSerializer<Object>() {
-            public void serialize(Object obj, JsonGenerator jsonGenerator, SerializerProvider provider) throws IOException, JsonProcessingException {
+            @Override
+            public void serialize(Object obj, JsonGenerator jsonGenerator,
+                    SerializerProvider serializerProvider) throws IOException,
+                    JsonProcessingException {
                 jsonGenerator.writeString(obj == null ? null : obj.toString());
             }
         };
+    }
+
+    private static class ObjectIdIntrospector extends JacksonAnnotationIntrospector {
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isAnnotationBundle(Annotation ann) {
+            if (ann.annotationType().equals(org.jongo.marshall.jackson.oid.ObjectId.class)) {
+                return false;
+            }
+            return super.isAnnotationBundle(ann);
+        }
     }
 }
