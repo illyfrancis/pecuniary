@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Path("payee")
+@Path("payees")
 public class PayeeResource {
 
     final static Logger logger = LoggerFactory.getLogger(PayeeResource.class);
