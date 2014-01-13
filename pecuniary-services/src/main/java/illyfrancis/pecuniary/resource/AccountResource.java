@@ -5,7 +5,6 @@ import illyfrancis.pecuniary.dao.Accounts.Account;
 
 import java.util.List;
 
-import javax.inject.Singleton;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -22,9 +21,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.sun.jersey.api.NotFoundException;
+import com.sun.jersey.spi.resource.Singleton;
 
 @Path("accounts")
-@Singleton // this doesn't seem to make this resource singleton...
+@Singleton
 public class AccountResource {
 
     final static Logger logger = LoggerFactory.getLogger(AccountResource.class);
